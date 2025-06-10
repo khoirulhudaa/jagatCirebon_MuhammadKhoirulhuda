@@ -2,6 +2,23 @@ const hamburger = document.getElementById('hamburger');
 const sidebar = document.getElementById('sidebar');
 const closeSidebar = document.getElementById('closeSidebar');
 
+// Get all sidebar menu items
+const menuItems = sidebar.querySelectorAll('ul li a');
+
+// Function to close sidebar
+function closeSidebarMenu() {
+    sidebar.classList.remove('active');
+    sidebar.style.left = '-100%';
+}
+
+// Add click event to close button
+closeSidebar.addEventListener('click', closeSidebarMenu);
+
+// Add click event to each menu item
+menuItems.forEach(item => {
+    item.addEventListener('click', closeSidebarMenu);
+});
+
 hamburger.addEventListener('click', () => {
     sidebar.style.left = '0';
 });
