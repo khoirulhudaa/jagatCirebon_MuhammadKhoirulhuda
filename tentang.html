@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>JagaCirebon - Tokoh</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Strait&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            filter: grayscale(100%);
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            font-family: "Strait", serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+       body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid #000;
+            padding: 1rem 62px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-menu a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+        }
+
+        .navbar-menu a:hover {
+            color: rgb(124, 124, 124);
+        }
+
+        .audio-hidden {
+            display: none;
+        }
+
+        .gr1, .gr2, .gr3 {
+            position: absolute;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .gr1 {
+            top: 0;
+            left: 0;
+            width: 300px;
+            opacity: 0.5;
+        }
+
+        .gr2 {
+            bottom: 0;
+            right: 0;
+            width: 400px;
+            opacity: 0.5;
+        }
+
+        .gr3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            opacity: 0.3;
+        }
+
+        .tokoh-section {
+            border-bottom: 1px solid #000;
+            padding: 6rem 62px;
+            min-height: 100vh;
+            margin-top: 0rem;
+            width: 100vw;
+        }
+
+        .tokoh-info {
+            width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .tokoh-info {
+                width: 100%;
+            }
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: baseline;
+            border-bottom: 1px solid #000;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb-link {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb-link:hover {
+            filter: brightness(75%);
+        }
+
+        .breadcrumb-separator {
+            margin: 0 0.5rem;
+        }
+
+        .tokoh-info h2 {
+            font-size: 2rem;
+            font-weight: normal;
+            border-bottom: 1px solid #000;
+            padding: 1.5rem 0;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (min-width: 1024px) {
+            .tokoh-info h2 {
+                font-size: 3rem;
+            }
+        }
+
+        .tokoh-info p {
+            font-size: 1rem;
+            line-height: 1.75;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            background: #fff;
+            border-top: 1px solid #000;
+            padding: 2rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .footer-links a:hover {
+            color: #3b82f6;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 2rem;
+            border: 1px solid #000;
+            max-width: 500px;
+            width: 98%;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            color: #3b82f6;
+        }
+
+        #modal-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #modal-description {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        
+        #xpresensi-text {
+            font-weight: bold;
+            background: linear-gradient(
+            to right,
+            #00b837, /* Kuning cerah */
+            #0051e7, /* Pink cerah */
+            #0184a5  /* Hijau neon */
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            animation: gradientShift 3s ease infinite, shine 1.5s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+            background-position: 0% 50%;
+            }
+            50% {
+            background-position: 100% 50%;
+            }
+            100% {
+            background-position: 0% 50%;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+            filter: brightness(1);
+            }
+            50% {
+            filter: brightness(1.5);
+            }
+            100% {
+            filter: brightness(1);
+            }
+        }
+
+        .navbar-menu a.current {
+            color: orange !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+     <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo" id="xpresensi-text">JagaCirebon</a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Halaman utama</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Audio -->
+    <audio id="background-audio" class="audio-hidden" src="/audio/cirebon-history.mp3" autoplay></audio>
+
+    <!-- Gradient Images -->
+    <img src="./assets/gr.svg" alt="gradient1" class="gr1" draggable="false" oncontextmenu="return false;">
+    <img src="./assets/gr2.svg" alt="gradient" class="gr3" draggable="false" oncontextmenu="return false;">
+    <img src="./assets/gr2.svg" alt="gradient2" class="gr2" draggable="false" oncontextmenu="return false;">
+
+    <!-- Main Section -->
+    <section class="tokoh-section">
+        <div class="tokoh-info">
+            <div class="breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Kaca Utama</a>
+                <span class="breadcrumb-separator">/</span>
+                <span>Tokoh Sajarah Cirebon</span>
+            </div>
+            <h2>Ngenani JagatCirebon</h2>
+            <p>
+                JagatCirebon kuwi sawijining platform digital sing kagawé kanggo ngenalna lan njaga kabudayan, sajarah, kasenian, wisata, carita rakyat, lan panganan khas Cirebon. Kita dadi jembatan kang nyambungké generasi saiki karo warisan para leluhur, ngajak panjenengan nyelami pesonané Cirebon liwat carita-carita inspiratif saka tokoh sajarah. Saka para pendiri Kesultanan Cirebon nganti para ulama panyebar Islam, kaya Sunan Gunung Jati, tokoh-tokoh iki wis mbentuk jati diri kutha sing kebak nilai kabudayan lan spiritualitas.
+            </p>
+            <p>
+                Liwat JagatCirebon, kita nyedhiyakake informasi kang jero ngenani rupa-rupa sisi budaya Cirebon. Panjenengan isa maca carita ngenani tradisi seni, kaya tari topeng lan sintren, sing nuduhké rasa seni masyarakat Cirebon. Kita uga ngulas babagan kasajerahan Kesultanan Cirebon, sing dikenal dadi pusat panyebaran Islam ing Tatar Jawa Kulon, lan pengaruhé marang sosial-politik jaman kepungkur.
+            </p>
+            <p>
+                Saliyane sajarah lan kasenian, JagatCirebon ngajak panjenengan nyekseni papan-papan wisata sing endah ing Cirebon. Saka Keraton Kasepuhan kang megah nganti situs ziarah Sunan Gunung Jati, saben panggonan nduwèni crita unik sing bisa nambah pengalaman panjenengan. Kita nyedhiyakke pandhuan wisata praktis, karo tips kanggo nikmati alamé kaya ing Pantai Kejawanan, uga jelajah désa-désa tradhisional sing isih ngetokké kabudayan leluhur.
+            </p>
+            <p>
+                Panganan khas Cirebon uga dadi sorotan utama JagatCirebon. Kita ngajak panjenengan ngenal rasa asli khas kéné, kaya empal gentong, sega jamblang, lan tahu gejrot — panganan sing ora mung enak, nanging ngandhut keragaman budaya kutha iki. Liwat resep, ulasan warung legendaris, lan carita ing baliké saben masakan, kita bareng nuduhké pengalaman kuliner sing otentik lan menggoda selera.
+            </p>
+            <p>
+                JagatCirebon uga nguripké manèh carita rakyat lan legenda sing diwarisna turun-temurun. Crita kaya legenda Nyi Mas Gandasari utawa geguritan bab kawiryané para wali nyedhiyaké pangerten ngenani nilai moral lan kawicaksanan lokal. Kanthi narasi sing menarik, muga-muga iso ngajari generasi enom supaya luwih ngurmati akar budayané dhéwé.
+            </p>
+            <p>
+                Minangka platform sing kabuka kanggo sapa wae, JagatCirebon cumepak dadi sumber informasi sing bisa dipercaya kanggo warga lokal, pelancong, lan para pencinta budaya saka sak donya. Kita ngajak panjenengan mèlu perjalanan iki, ngudhari ayuné Cirebon, lan bareng-bareng njaga warisané. Bareng JagatCirebon, ayo padha ngrayakaké kabudayan, sajarah, lan carita Cirebon sing ora bakal ilang, kanggo dina iki lan sing bakal teka.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2025 JagaCirebon. Hak cipta dilindungi.</p>
+            <ul class="footer-links">
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="kontak.hmtl">Kontak</a></li>
+                <li><a href="index.html">Halaman utama</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.navbar-menu a');
+            function setCurrentLink() {
+                const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+                navLinks.forEach(link => {
+                    link.classList.remove('current');
+                    const href = link.getAttribute('href');
+                    if (href === currentPath) {
+                        link.classList.add('current');
+                    }
+                });
+            }
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(l => l.classList.remove('current'));
+                    this.classList.add('current');
+                });
+            });
+            setCurrentLink();
+        });
+    </script>
+</body>
+</html>

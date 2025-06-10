@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>JagaCirebon - Tokoh</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Strait&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            filter: grayscale(100%);
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            font-family: "Strait", serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+       body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid #000;
+            padding: 1rem 62px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-menu a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+        }
+
+        .navbar-menu a:hover {
+            color: #3b82f6;
+        }
+
+        .audio-hidden {
+            display: none;
+        }
+
+        .gr1, .gr2, .gr3 {
+            position: absolute;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .gr1 {
+            top: 0;
+            left: 0;
+            width: 300px;
+            opacity: 0.5;
+        }
+
+        .gr2 {
+            bottom: 0;
+            right: 0;
+            width: 400px;
+            opacity: 0.5;
+        }
+
+        .gr3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            opacity: 0.3;
+        }
+
+        .tokoh-section {
+            border-bottom: 1px solid #000;
+            padding: 6rem 62px;
+            min-height: 100vh;
+            margin-top: 0rem;
+            width: 100vw;
+        }
+
+        .tokoh-info {
+            width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .tokoh-info {
+                width: 100%;
+            }
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: baseline;
+            border-bottom: 1px solid #000;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb-link {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb-link:hover {
+            filter: brightness(75%);
+        }
+
+        .breadcrumb-separator {
+            margin: 0 0.5rem;
+        }
+
+        .tokoh-info h2 {
+            font-size: 2rem;
+            font-weight: normal;
+            border-bottom: 1px solid #000;
+            padding: 1.5rem 0;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (min-width: 1024px) {
+            .tokoh-info h2 {
+                font-size: 3rem;
+            }
+        }
+
+        .tokoh-info p {
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .tokoh-gallery {
+            width: 100%;
+            padding-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        @media (min-width: 1024px) {
+            .tokoh-gallery {
+                width: 100%;
+            }
+        }
+
+        .tokoh-card {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #000;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .tokoh-card {
+                width: 30%;
+            }
+        }
+
+        .tokoh-card:hover {
+            filter: brightness(90%);
+        }
+
+        .tokoh-card:active {
+            transform: scale(0.97);
+        }
+
+        .tokoh-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .tokoh-card:hover .tokoh-image {
+            transform: scale(1.1);
+        }
+
+        .booking-button {
+            position: absolute;
+            bottom: 1rem;
+            right: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border: 1px solid #000;
+            background: #fff;
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+            z-index: 9;
+        }
+
+        .booking-button:hover {
+            background: #f0f0f0;
+            animation: glow 1.5s infinite;
+        }
+
+        .booking-button:active {
+            transform: scale(0.97);
+        }
+
+        .arrow-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 0.75rem;
+        }
+
+        @keyframes glow {
+            0% { background: #fff; }
+            50% { background: #f0f0f0; }
+            100% { background: #fff; }
+        }
+
+        .footer {
+            background: #fff;
+            border-top: 1px solid #000;
+            padding: 2rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .footer-links a:hover {
+            color: #3b82f6;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 2rem;
+            border: 1px solid #000;
+            max-width: 500px;
+            width: 98%;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            color: #3b82f6;
+        }
+
+        #modal-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #modal-description {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        
+        #xpresensi-text {
+            font-weight: bold;
+            background: linear-gradient(
+            to right,
+            #00b837, /* Kuning cerah */
+            #0051e7, /* Pink cerah */
+            #0184a5  /* Hijau neon */
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            animation: gradientShift 3s ease infinite, shine 1.5s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+            background-position: 0% 50%;
+            }
+            50% {
+            background-position: 100% 50%;
+            }
+            100% {
+            background-position: 0% 50%;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+            filter: brightness(1);
+            }
+            50% {
+            filter: brightness(1.5);
+            }
+            100% {
+            filter: brightness(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+     <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo" id="xpresensi-text">JagaCirebon</a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Halaman utama</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Audio -->
+    <audio id="background-audio" class="audio-hidden" src="/audio/cirebon-history.mp3" autoplay></audio>
+
+    <!-- Gradient Images -->
+    <img src="./assets/gr.svg" alt="gradient1" class="gr1" draggable="false" oncontextmenu="return false;">
+    <img src="./assets/gr2.svg" alt="gradient" class="gr3" draggable="false" oncontextmenu="return false;">
+    <img src="./assets/gr2.svg" alt="gradient2" class="gr2" draggable="false" oncontextmenu="return false;">
+
+    <!-- Main Section -->
+    <section class="tokoh-section">
+        <div class="tokoh-info">
+            <div class="breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Laman utama</a>
+                <span class="breadcrumb-separator">/</span>
+                <span>Tokoh Sejarah Cirebon</span>
+            </div>
+            <h2>Ngenal Tokoh Bersejarah Cirebon</h2>
+            <p>
+                Cari tahu cerita inspiratif para tokoh sing mbangun sejarah lan budaya Cirebon, 
+                saka pendiri kesultanan nganti penyebar agama Islam.
+            </p>
+        </div>
+        <div class="tokoh-gallery">
+            <div class="tokoh-card">
+                <img src="./assets/cakrabuana.jpg" alt="Pangeran Walangsungsang" class="tokoh-image">
+                <button class="booking-button" onclick="openModal('walangsungsang')">
+                    <span>Rinciyan</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="tokoh-card">
+                <img src="./assets/sunanGunungJati.jpg" alt="Sunan Gunung Jati" class="tokoh-image">
+                <button class="booking-button" onclick="openModal('sunanGunungJati')">
+                    <span>Rinciyan</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="tokoh-card">
+                <img src="./assets/kiGedeTapa.jpg" alt="Ki Gedeng Tapa" class="tokoh-image">
+                <button class="booking-button" onclick="openModal('kiGedengTapa')">
+                    <span>Rinciyan</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="tokoh-card">
+                <img src="./assets/kiDanusela.jpeg" alt="Ki Danusela" class="tokoh-image">
+                <button class="booking-button" onclick="openModal('kiDanusela')">
+                    <span>Rinciyan</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="tokoh-card">
+                <img src="./assets/default.jpg" alt="Nyai Rara Santang" class="tokoh-image">
+                <button class="booking-button" onclick="openModal('nyaiRaraSantang')">
+                    <span>Rinciyan</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="tokoh-card">
+                <img src="./assets/default.jpg" alt="Nyai Subang Larang" class="tokoh-image">
+                <button class="booking-button" onclick="openModal('nyaiSubangLarang')">
+                    <span>Rinciyan</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal(event)">×</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2025 JagaCirebon. Hak cipta dilindungi.</p>
+            <ul class="footer-links">
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="kontak.hmtl">Kontak</a></li>
+                <li><a href="index.html">Halaman utama</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('background-audio');
+            if (audio) {
+                audio.volume = 0.75;
+                audio.muted = false;
+                audio.play().catch(error => {
+                    console.error('Audio playback failed:', error);
+                });
+            }
+
+            window.scrollTo(0, 0);
+        });
+
+        const figureDetails = {
+            walangsungsang: {
+                title: "Pangeran Walangsungsang",
+                description: "Pendiri Kesultanan Cirebon pada tahun 1430. Putra Prabu Siliwangi dan Nyai Subang Larang, ia dikenal sebagai Haji Abdullah Iman setelah menunaikan ibadah haji. Ia mendirikan istana Pakungwati dan memulai penyebaran Islam di Cirebon."
+            },
+            sunanGunungJati: {
+                title: "Sunan Gunung Jati",
+                description: "Anggota Wali Songo dan keponakan Pangeran Walangsungsang. Memimpin Cirebon dari 1479 hingga 1568, ia membawa kesultanan ke masa kejayaan melalui perdagangan, ekspansi wilayah, dan penyebaran Islam. Ia juga pendiri Kesultanan Banten."
+            },
+            kiGedengTapa: {
+                title: "Ki Gedeng Tapa",
+                description: "Tokoh awal yang mendirikan dukuh Caruban, cikal bakal Cirebon. Kakek Pangeran Walangsungsang, ia membuka wilayah pesisir yang kemudian menjadi pelabuhan penting di Cirebon."
+            },
+            kiDanusela: {
+                title: "Ki ",
+                description: "Kuwu pertama Caruban, diangkat sebagai penghormatan oleh masyarakat. Ia berperan dalam pembentukan komunitas awal di Kebon Pesisir sebelum pemerintahan Pangeran Walangsungsang."
+            },
+            nyaiRaraSantang: {
+                title: "Nyai Rara Santang",
+                description: "Putri Prabu Siliwangi dan saudari Pangeran Walangsungsang. Ia memeluk Islam, menunaikan ibadah haji, dan menikah dengan Syarif Abdullah dari Mesir. Ia adalah ibu Sunan Gunung Jati."
+            },
+            nyaiSubangLarang: {
+                title: "Nyai Subang Larang",
+                description: "Istri Prabu Siliwangi dan ibu Pangeran Walangsungsang, Nyai Rara Santang, dan Raden Kian Santang. Ia memeluk Islam dan memengaruhi anak-anaknya untuk mempelajari agama Islam, menjadi dasar berdirinya Kesultanan Cirebon."
+            }
+        };
+
+        function openModal(figure) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+            document.body.classList.add('modal-open');
+
+            modalTitle.textContent = figureDetails[figure].title;
+            modalDescription.textContent = figureDetails[figure].description;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal(event) {
+            const modal = document.getElementById('modal');
+            const modalContent = document.querySelector('.modal-content');
+            if (event.target === modal || event.target === document.querySelector('.modal-close')) {
+                modal.style.display = 'none';
+                document.body.classList.remove('modal-open');
+            }
+        }
+    </script>
+</body>
+</html>

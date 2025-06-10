@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>JagatCirebon - Wisata</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Strait&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/index.css">
+    <style>
+        .packet-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 3.5rem 1.5rem;
+            margin-top: 2rem;
+            user-select: none;
+        }
+
+        @media (min-width: 1024px) {
+            .packet-section {
+                padding: 4rem 4rem 2rem 4rem;
+            }
+        }
+
+        .packet-section h2 {
+            width: 94%;
+            font-size: 2rem;
+            border-bottom: 1px solid black;
+            padding-bottom: 0.75rem;
+            font-weight: normal;
+        }
+
+        @media (min-width: 1024px) {
+            .packet-section h2 {
+                width: 100%;
+                font-size: 3rem;
+            }
+        }
+
+        .packet-section p {
+            width: 94%;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            color: black;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 1024px) {
+            .packet-section p {
+                width: max-content;
+                margin-top: 20px;
+            }
+        }
+
+        .breadcrumb-and-buttons {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 1rem 0 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .breadcrumb-and-buttons {
+                flex-direction: row;
+                align-items: baseline;
+                justify-content: space-between;
+            }
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .breadcrumb {
+                width: 70%;
+            }
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            cursor: pointer;
+        }
+
+        .breadcrumb a:hover {
+            filter: brightness(0.75);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+        }
+
+        .buttons {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .buttons {
+                margin-top: 0;
+            }
+        }
+
+        .booking-button, .classical-button {
+            display: flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            font-size: 1rem;
+            color: black;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .booking-button {
+            background-color: #FFD476;
+            margin-right: 0;
+        }
+
+        .classical-button {
+            background-color: transparent;
+        }
+
+        .booking-button:active, .classical-button:active {
+            transform: scale(0.97);
+        }
+
+        .booking-button i, .classical-button i {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.75rem;
+        }
+
+        .services-container {
+            width: 100%;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        @media (min-width: 1024px) {
+            .services-container {
+                display: flex;
+            }
+        }
+
+        .service-column {
+            width: 100%;
+            padding: 0.75rem 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .service-column {
+                width: 33.333%;
+                padding: 2rem;
+            }
+
+            .service-column:nth-child(2) {
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+            }
+        }
+
+        .service-column h3 {
+            font-size: 1.25rem;
+            margin: 0.75rem 0 2rem 0;
+            width: 90%;
+            border-bottom: 1px solid black;
+            padding-bottom: 1rem;
+        }
+
+        .service-column ul {
+            list-style: none;
+        }
+
+        .service-column li {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            gap: 12px;
+        }
+
+        .service-column li i {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.75rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0.75rem 1rem;
+        }
+
+        .breadcrumb2 {
+            display: flex;
+            align-items: baseline;
+            border-bottom: 1px solid #000;
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .breadcrumb-link2 {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .breadcrumb-link2:hover {
+            filter: brightness(75%);
+        }
+
+        .breadcrumb-separator2 {
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio -->
+    <audio id="background-audio" src="./assets/audio/packet.mp3" autoplay loop></audio>
+
+    <!-- Gradient Images -->
+    <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr4.svg" alt="gradient" class="gradient gr3">
+    <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr.svg" alt="gradient1" class="gradient gr1">
+    <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr2.svg" alt="gradient2" class="gradient gr2">
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html" class="logo" id="xpresensi-text">JagatCirebon</a>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Halaman utama</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <!-- Packet Section -->
+    <section class="packet-section">
+        <div class="breadcrumb2">
+            <a href="index.html" class="breadcrumb-link2">Laman utama</a>
+            <span class="breadcrumb-separator2">/</span>
+            <span>Tokoh Sejarah Cirebon</span>
+        </div>
+        <h2>Wisata Populer neng Cirebon</h2>
+        <p>Jelajahna kaendahan Cirebon kalawan wisata alam sing nggawe betah, warisan budaya sing ajeg, lan kuliner khas sing marai ngiler.</p>
+        <div class="breadcrumb-and-buttons">
+            <div class="breadcrumb">
+                <a style="color: black; cursor: default;">Wisata populer</a>
+                <span>-</span>
+                <span>Sejarah</span>
+            </div>
+            <div class="buttons">
+                <button class="booking-button">
+                    <span>Cirebon</span>
+                </button>
+                <button class="classical-button">
+                    <span>Kulineran</span>
+                </button>
+            </div>
+        </div>
+        <div class="services-container">
+            <div class="service-column">
+                <h3>Wisata Alam</h3>
+                <ul>
+                    <li><i data-feather="check-square"></i> Pantai Kejawanan</li>
+                    <li><i data-feather="check-square"></i> Bukit Gronggong</li>
+                    <li><i data-feather="check-square"></i> Telaga Biru</li>
+                    <li><i data-feather="check-square"></i> Situ Sedong</li>
+                    <li><i data-feather="check-square"></i> Taman Krucuk</li>
+                    <li><i data-feather="check-square"></i> Hutan Kera Plangon</li>
+                </ul>
+            </div>
+            <div class="service-column">
+                <h3>Wisata Budaya</h3>
+                <ul>
+                    <li><i data-feather="check-square"></i> Keraton Kasepuhan</li>
+                    <li><i data-feather="check-square"></i> Keraton Kanoman</li>
+                    <li><i data-feather="check-square"></i> Masjid Sang Cipta Rasa</li>
+                    <li><i data-feather="check-square"></i> Kampung Batik Trusmi</li>
+                    <li><i data-feather="check-square"></i> Makam Sunan Gunung Jati</li>
+                    <li><i data-feather="check-square"></i> Taman Sari Gua Sunyaragi</li>
+                </ul>
+            </div>
+            <div class="service-column">
+                <h3>Wisata Kuliner</h3>
+                <ul>
+                    <li><i data-feather="check-square"></i> Nasi Jamblang Mang Dul</li>
+                    <li><i data-feather="check-square"></i> Empal Gentong H. Apud</li>
+                    <li><i data-feather="check-square"></i> Tahu Gejrot Pak Umar</li>
+                    <li><i data-feather="check-square"></i> Docang Pak Kumis</li>
+                    <li><i data-feather="check-square"></i> Sate Kalong</li>
+                    <li><i data-feather="check-square"></i> Mie Koclok</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content-wrapper-footer">
+            <div class="footer-logo">
+                <h2 id="xpresensi-text">JagatCirebon</h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <p>Seni & Tradisi</p>
+                    <ul>
+                        <li>Tari Topeng Cirebon</li>
+                        <li>Wayang Golek Cepak</li>
+                        <li>Upacara Panjang Jimat</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <p>Kuliner Khas</p>
+                    <ul>
+                        <li>Nasi Jamblang</li>
+                        <li>Empal Gentong</li>
+                        <li>Tahu Gejrot & Docang</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <p>Warisan & Kriya</p>
+                    <ul>
+                        <li>Batik Trusmi</li>
+                        <li>Kerajinan Kerang</li>
+                        <li>Senjata Kujang Cirebon</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <small>#JagatCirebonan — Eksplorasi Digital Budaya Nusantara</small>
+        <div class="back-to-top" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 18V6M6 12l6-6 6 6" stroke="black" stroke-width="1" fill="none"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('background-audio');
+            if (audio) {
+                audio.volume = 0.75;
+                audio.muted = false;
+                audio.play().catch(error => {
+                    console.error('Error playing audio:', error);
+                });
+            }
+            window.scrollTo(0, 0);
+            // Initialize Feather Icons
+            feather.replace();
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>

@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>JagaCirebon - Kacirebonan</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Strait&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+     <div class="container-load">
+        <img
+            loading="lazy"
+            draggable="false"
+            src="./assets/gr4.svg"
+            alt="gradient"
+            class="gradient gr3"
+        />
+        <img
+            loading="lazy"
+            draggable="false"
+            src="./assets/gr.svg"
+            alt="gradient1"
+            class="gradient gr1"
+        />
+        <img
+            loading="lazy"
+            draggable="false"
+            src="./assets/gr3.svg"
+            alt="gradient2"
+            class="gradient gr2"
+        />
+
+        <div class="horizontal-line" style="top: 8%;"></div>
+        <div class="horizontal-line" style="top: 20%;"></div>
+        <div class="horizontal-line" style="top: 30%;"></div>
+        <div class="horizontal-line" style="top: 40%;"></div>
+        <div class="horizontal-line" style="top: 50%;"></div>
+        <div class="horizontal-line" style="top: 60%;"></div>
+        <div class="horizontal-line" style="top: 70%;"></div>
+        <div class="horizontal-line" style="top: 80%;"></div>
+        <div class="horizontal-line" style="top: 90%;"></div>
+        <div class="horizontal-line" style="top: 100%;"></div>
+
+        <div class="vertical-line-load" style="left: 10%;"></div>
+        <div class="vertical-line-load" style="left: 20%;"></div>
+        <div class="vertical-line-load" style="left: 30%;"></div>
+        <div class="vertical-line-load" style="left: 40%;"></div>
+        <div class="vertical-line-load" style="left: 50%;"></div>
+        <div class="vertical-line-load" style="left: 60%;"></div>
+        <div class="vertical-line-load" style="left: 70%;"></div>
+        <div class="vertical-line-load" style="left: 80%;"></div>
+        <div class="vertical-line-load" style="left: 90%;"></div>
+        <div class="vertical-line-load" style="left: 100%;"></div>
+
+        <div class="loading-bar-container">
+            <div class="title-container">
+                <h2 id="xpresensi-text" class="title">JagatCirebon</h2>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="vertical-bar"></div>
+        </div>
+    </div>
+
+    <main id="main-content" class="main-content" style="display: none;">
+        <!-- Audio -->
+        <audio id="background-audio" src="./assets/audio/auio.mp3" autoplay loop></audio>
+
+       <!-- Navbar -->
+        <nav>
+            <a href="index.html" class="logo" id="xpresensi-text">JagatCirebon</a>
+            <div class="menu">
+                <ul>
+                    <li><a href="#warisan">Budaya</a></li>
+                    <li><a href="#kesenian">Kesenian</a></li>
+                    <li><a href="#wisata">Wisata</a></li>
+                    <li><a href="#tokoh">Tokoh</a></li>
+                    <li><a href="#kuliner">Kuliner</a></li>
+                    <div>|</div>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <a href="index.html" class="logo" id="xpresensi-text">JagatCirebon</a>
+            <div class="close-btn" id="closeSidebar">×</div>
+            <ul>
+                <li><a href="#warisan">Budaya</a></li>
+                <li><a href="#kesenian">Kesenian</a></li>
+                <li><a href="#wisata">Wisata</a></li>
+                <li><a href="#tokoh">Tokoh</a></li>
+                <li><a href="#cerita">Cerita</a></li>
+                <li><a href="#kuliner">Kuliner</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-grid">
+                <div class="grid-line horizontal top-8"></div>
+                <div class="grid-line horizontal top-20"></div>
+                <div class="grid-line horizontal top-30"></div>
+                <div class="grid-line horizontal top-40"></div>
+                <div class="grid-line horizontal top-50"></div>
+                <div class="grid-line horizontal top-60"></div>
+                <div class="grid-line horizontal top-70"></div>
+                <div class="grid-line horizontal top-80"></div>
+                <div class="grid-line horizontal top-90"></div>
+                <div class="grid-line horizontal top-100"></div>
+                <div class="grid-line vertical left-10"></div>
+                <div class="grid-line vertical left-20"></div>
+                <div class="grid-line vertical left-30"></div>
+                <div class="grid-line vertical left-40"></div>
+                <div class="grid-line vertical left-50"></div>
+                <div class="grid-line vertical left-60"></div>
+                <div class="grid-line vertical left-70"></div>
+                <div class="grid-line vertical left-80"></div>
+                <div class="grid-line vertical left-90"></div>
+                <div class="grid-line vertical left-100"></div>
+            </div>
+            <img src="./assets/gr.svg" alt="gradient" class="gradient gr3">
+            <img src="./assets/gr4.svg" alt="gradient1" class="gradient gr1">
+            <img src="./assets/gr2.svg" alt="gradient2" class="gradient gr2">
+            <div class="hero-content">
+                <div class="hero-top-bar">
+                    <span class="icon">✨</span>
+                    Caruban Nagari, Kutha Wali (Cirebone kula)
+                    <span class="icon">✨</span>
+                </div>
+                <div class="container-mask">
+                   <div class="mask"></div>
+                   <h1 class="hero-title">Kacirebonan: Nyambungna Budaya <br class="br" /> Nganggo Sentuhan Digital</h1>
+                </div>
+                <p class="hero-description desktop">
+                    Nguri-uri budaya Kutha Wali kanthi digital. Kacirebonan, papan kanggo nyusur warisan budaya saka Keraton nganti batik Mega Mendung kanthi harmoni modern.
+                </p>
+                <p class="hero-description mobile">
+                    Nguri-uri budaya Kutha Wali kanthi digital - Kacirebonan
+                </p>
+                <a href="#warisan" class="hero-button">
+                    Miwiti Nelusuri
+                    <span class="icon">➔</span>
+                </a>
+                <div class="hero-tags">
+                    <div class="tag">
+                        <span class="icon">⌘</span>
+                        Budaya
+                    </div>
+                    <div class="tag">
+                        <span class="icon">⌘</span>
+                        Sejarah
+                    </div>
+                    <div class="tag">
+                        <span class="icon">⌘</span>
+                        Tradisi
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="sponsor-section">
+            <div class="sponsor-container">
+                <div class="sponsor-items">
+                    <div class="sponsor-item">Budaya</div>
+                    <div class="sponsor-item">Warisan</div>
+                    <div class="sponsor-item">Sejarah</div>
+                </div>
+                <div class="sponsor-items">
+                    <div class="sponsor-item">Pengetahuan</div>
+                    <div class="sponsor-item">Sejarah</div>
+                    <div class="sponsor-item">Warisan</div>
+                </div>
+            </div>
+            <div class="sponsor-divider">
+                <div class="divider-box"></div>
+            </div>
+            <div class="sponsor-container">
+                <div class="sponsor-items">
+                    <div class="sponsor-item">Pengetahuan</div>
+                    <div class="sponsor-item">Warisan</div>
+                    <div class="sponsor-item">Sejarah</div>
+                </div>
+                <div class="sponsor-items">
+                    <div class="sponsor-item">Pengetahuan</div>
+                    <div class="sponsor-item">Sejarah</div>
+                    <div class="sponsor-item">Warisan</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="warisan" class="culture-section">
+            <div class="culture-image">
+                <img src="./assets/kasepuhan2.jpg" alt="kasepuhan cirebon" class="grayscale">
+            </div>
+            <div class="culture-content">
+                <div class="culture-tag">
+                    <span class="icon">✨</span>
+                    Babagan Kacirebonan
+                </div>
+                <h2 class="culture-title">
+                    Warisan Budaya Kutha Wali <br class="desktop"> kanthi
+                    <span class="highlight">Sentuhan Digital</span>
+                </h2>
+                <p class="culture-description desktop">
+                    Temokno kaendahan budaya Cirebon, saka Keraton Kasepuhan nganti batik Mega Mendung, kanthi pengalaman digital sing nggawa harmoni tradisi lan modernitas kanggo nyusur warisan Kutha Wali.
+                </p>
+                <a href="warisanBudaya.html" class="culture-button">
+                    Sakteruse Nyusur
+                    <span class="icon">➔</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="arts-section" id="kesenian">
+            <div class="arts-content">
+                <h2 class="arts-title">Kesenian Tradisional Kutha Wali</h2>
+                <div class="arts-items">
+                    <div class="arts-item">
+                        <span class="icon">✨</span>
+                        <p class="arts-item-title">Tarling Cirebonan</p>
+                        <div class="divider"></div>
+                        <div class="bottom-card1">
+                            <p class="arts-item-description">
+                                Nikmati alunan musik tarling, gabungan suling lan gitar sing nggambarkeun jiwa pesisir Cirebon.
+                            </p>
+                            <a href="/tarling" class="arts-button" data-modal="tarling">
+                                Sakteruse Nyusur
+                                <span class="icon">➔</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="arts-item">
+                        <span class="icon">✨</span>
+                        <p class="arts-item-title">Tari Topeng</p>
+                        <div class="divider"></div>
+                        <div class="bottom-card1">
+                            <p class="arts-item-description">
+                                Temokno kaendahan tari topeng Cirebon sing nggawa crita budaya lan filosofi ing saben gerakan.
+                            </p>
+                            <a href="/tari-topeng" class="arts-button" data-modal="tari-topeng">
+                                Sakteruse Nyusur
+                                <span class="icon">➔</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="arts-item">
+                        <span class="icon">✨</span>
+                        <p class="arts-item-title">Genjring</p>
+                        <div class="divider"></div>
+                        <div class="bottom-card1">
+                            <p class="arts-item-description">
+                                Rasakno kesenian genjring, musik ritmis sing terkenal lan nggambarake semangat komunitas Cirebon.
+                            </p>
+                            <a href="/genjring" class="arts-button" data-modal="genjring">
+                                Sakteruse Nyusur
+                                <span class="icon">➔</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arts-decoration">
+                <div class="curve left"></div>
+                <div class="line"></div>
+                <div class="curve right"></div>
+            </div>
+        </section>
+
+        <section class="section5" id="wisata">
+            <div class="container5">
+                <h2 class="heading">Wisata Sejarah & Budaya Sekitar Daerah Cirebon</h2>
+                <div class="list-container5">
+                    <div class="list-wrapper">
+                        <div class="list-column">
+                            <div class="list-item active" data-image="./assets/handphonekase.jpg" data-site="kasepuhan">
+                                <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Keraton Kasepuhan
+                            </div>
+                            <div class="list-item" data-image="./assets/handphonekan.jpg" data-site="kanoman">
+                                <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Keraton Kanoman
+                            </div>
+                            <div class="list-item" data-image="./assets/handphone.png" data-site="sunyaragi">
+                                <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Gua Sri Sunyaragi
+                            </div>
+                        </div>
+                        <div class="list-column2">
+                            <div class="list-item list-item-right" data-image="./assets/handphoneagu.jpg" data-site="masjid-agung">
+                                <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Masjid Agung
+                            </div>
+                            <div class="list-item list-item-right" data-image="./assets/handphonebatik.jpg" data-site="batik-trusmi">
+                                <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                Pasar Batik Trusmi
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-section5">
+                <div class="bottom-content5">
+                    <p>Jelajahi destinasi budaya Kutha Wali kanthi tur virtual sing cepet lan digital, temokno kaendahan warisan Cirebon saka ngendi wae!</p>
+                </div>
+                <div class="button-container5">
+                    <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Keraton+Kasepuhan+Cirebon" aria-label="Lihat peta destinasi budaya Cirebon di Google Maps" class="button5 button-primary5" id="google-maps-link">
+                        Lihat di Google Maps
+                        <p class="p5">
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </p>
+                    </a>
+                    <a target="_blank" href="listWisata.html" aria-label="Lihat wisata" class="button5 button-primary5b" id="google-maps-link">
+                        Lihat selengkapnya
+                        <p class="p5">
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </p>
+                    </a>
+                </div>
+                <img
+                    loading="lazy"
+                    src="./assets/handphonekase.jpg"
+                    alt="Keraton Kasepuhan"
+                    class="handphone-img visible"
+                />
+            </div>
+        </section>
+
+        <section id="photography" class="section6">
+            <div class="container6">
+            <!-- Carousel -->
+            <div class="carousel">
+                <img src="./assets/slide.jpg" alt="Cirebon 1" class="active">
+                <img src="./assets/slide2.jpg" alt="Cirebon 2">
+                <img src="./assets/slide3.jpg" alt="Cirebon 3">
+                <img src="./assets/slide4.jpg" alt="Cirebon 4">
+                <img src="./assets/slide5.jpg" alt="Cirebon 5">
+                <button class="nav-button prev">←</button>
+                <button class="nav-button next">→</button>
+            </div>
+
+            <!-- Content -->
+            <div class="content6">
+                <div class="badge">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2l1.77 3.58 3.96.58-2.87 2.8.68 3.95L12 11.15 8.46 12.91l.68-3.95-2.87-2.8 3.96-.58L12 2z"/>
+                </svg>
+                <p>Kacirebonan: Galeri Budaya Digital</p>
+                </div>
+                <h2 class="heading6">
+                 Harmoni Budaya Cirebon dalam
+                <span class="highlight">Dunia Digital</span>
+                </h2>
+                <p data-aos="fade-up" data-aos-delay="100" class="description6">
+                    Abadèkna kaéndahan budaya Cirebon liwat fotografi lan videografi <br>
+                    kanthi kualitas dhuwur, ngadhekaké galeri digital sing nyenengaké ati.
+                </p>
+            </div>
+            </div>
+        </section>
+
+        <section class="section7" id="tokoh">
+            <div class="header-container">
+            <h2 class="heading">
+                Jejak Tokoh & Nilai Kebudayaan <br class="hidden lg:inline"> Warisan Cirebon
+            </h2>
+            <div class="user-images">
+                <div class="user-image">
+                <img loading="lazy" draggable="false" src="./assets/cakrabuana.jpg" alt="customer-photo">
+                </div>
+                <div class="user-image">
+                <img loading="lazy" draggable="false" src="./assets/sunanGunungJati.jpg" alt="customer-photo">
+                </div>
+                <div class="user-image">
+                <img loading="lazy" draggable="false" src="./assets/kiDanusela.jpeg" alt="customer-photo">
+                </div>
+                <div class="user-image">
+                <img loading="lazy" draggable="false" src="./assets/kiGedeTapa.jpg" alt="customer-photo">
+                </div>
+                <div class="user-image">
+                <img loading="lazy" draggable="false" src="./assets/cakrabuana.jpg" alt="customer-photo">
+                </div>
+                <div class="user-image">
+                <img loading="lazy" draggable="false" src="./assets//sunanGunungJati.jpg" alt="customer-photo">
+                </div>
+            </div>
+            </div>
+            <div class="bottom-section">
+            <div class="gallery-preview">
+                <div class="gallery-column">
+                <div class="gallery-item">
+                    <img loading="lazy" draggable="false" src="./assets/cakrabuana.jpg" alt="tokoh budaya">
+                </div>
+                <div class="gallery-item">
+                    <img loading="lazy" draggable="false" src="./assets/kiDanusela.jpeg" alt="tokoh budaya">
+                </div>
+                </div>
+                <div class="gallery-divider"></div>
+                <div class="gallery-column">
+                <div class="gallery-item">
+                    <img loading="lazy" draggable="false" src="./assets/kiGedeTapa.jpg" alt="tokoh budaya">
+                </div>
+                <div class="gallery-item">
+                    <img loading="lazy" draggable="false" src="./assets/sunanGunungJati.jpg" alt="tokoh budaya">
+                </div>
+                </div>
+            </div>
+            <div class="bottom-content">
+                    <div class="bottom-text">
+                        <h2 class="bottom-heading">Tokoh & Inspirasi</h2>
+                        <p class="bottom-description">
+                            Nyeruput crita para tokoh budaya Nusantara sing wis marisi ajaran luhur, seni, lan semangat kebangsaan. Saben tokoh iku cerminan saka jati diri lan kawicaksanan lokal.
+                        </p>
+                    </div>
+                    <a href="listTokoh.html">
+                        <div class="gallery-button">
+                            Deleng sakabèhé
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="gallery-popup" id="galleryPopup">
+            <div class="popup-content">
+            <div class="popup-header">
+                <h2 class="popup-title">Galeri Tokoh Budaya</h2>
+                <div class="close-button" onclick="toggleGallery()">
+                <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+                </div>
+            </div>
+            <div class="popup-gallery">
+                <div class="gallery-image">
+                <img loading="lazy" src="./assets/gl1.jpg" alt="Tokoh Budaya 1">
+                </div>
+                <div class="gallery-image">
+                <img loading="lazy" src="./assets/us1.jpg" alt="Tokoh Budaya 2">
+                </div>
+                <div class="gallery-image">
+                <img loading="lazy" src="./assets/us1.jpg" alt="Tokoh Budaya 3">
+                </div>
+                <div class="gallery-image">
+                <img loading="lazy" src="./assets/gl1.jpg" alt="Tokoh Budaya 4">
+                </div>
+                <div class="gallery-image">
+                <img loading="lazy" src="./assets/gl1.jpg" alt="Tokoh Budaya 5">
+                </div>
+                <div class="gallery-image">
+                <img loading="lazy" src="./assets/us1.jpg" alt="Tokoh Budaya 6">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <section class="section8">
+            <div class="content-wrapper">
+                 <div class="item">
+                    <h2>9</h2>
+                    <p>Kesenian Tradisional</p>
+                    <div class="button8" data-category="kesenian">Lihat</div>
+                </div>
+                <div class="item">
+                    <h2>4</h2>
+                    <p>Keraton di Cirebon</p>
+                    <div class="button8" data-category="keraton">Lihat</div>
+                </div>
+                <div class="item">
+                    <h2>18</h2>
+                    <p>Motif Batik Khas</p>
+                    <div class="button8" data-category="batik">Lihat</div>
+                </div>
+                <div class="item">
+                    <h2>10</h2>
+                    <p>Makanan Khas Cirebon</p>
+                    <div class="button8" data-category="makanan">Lihat</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="cirebonModal" id="infoModal">
+            <div class="cirebonModalContent">
+                <span class="close-buttonCRB">Tutup</span>
+                <ul id="modalList"></ul>
+            </div>
+        </div>
+
+        <section class="section9" id="cerita">
+        <div class="content-wrapper9">
+            <h2>Cerita dan Legenda Rakyat Cirebon yang Memikat</h2>
+            <div class="cards-container">
+                <div class="card" data-aos-delay="100" data-video="https://www.youtube.com/embed/MQLDhOYNeNE?si=sYN835ViO3WaMk9e">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M12 8v8"/>
+                        <path d="M8 12h8"/>
+                    </svg>
+                    <p class="title">Legenda Sunan Gunung Jati</p>
+                    <div class="divider"></div>
+                    <p class="description">Kisah spiritual pendiri Kesultanan Cirebon, yang membawa Islam dan membentuk budaya kota.</p>
+                    <div class="button-container9">
+                        <i data-feather="play-circle"></i>
+                        <p>Putar video</p>
+                    </div>
+                </div>
+                <div class="card" data-aos-delay="200" data-video="https://www.youtube.com/embed/F7Wa5XJ5GWk?si=vqDbYbFZpxr_sLuX">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4"/>
+                        <path d="M12 8h.01"/>
+                    </svg>
+                    <p class="title">Cerita Nyai Rara Santang</p>
+                    <div class="divider"></div>
+                    <p class="description">Kisah putri Pajajaran yang berperan penting dalam penyebaran Islam dan warisan budaya Cirebon.</p>
+                    <div class="button-container9">
+                        <i data-feather="play-circle"></i>
+                        <p>Putar video</p>
+                    </div>
+                </div>
+                <div class="card" data-aos-delay="300" data-video="https://www.youtube.com/embed/C-kcD6hbAuY?si=4Gf4cfQfVpk8AbfZ">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    <p class="title">Batik Mega Mendung</p>
+                    <div class="divider"></div>
+                    <p class="description">Cerita di balik motif batik yang khas, melambangkan keindahan dan kedamaian yang diwariskan.</p>
+                    <div class="button-container9">
+                        <i data-feather="play-circle"></i>
+                        <p>Putar video</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="decorative-container">
+            <div class="decorative-left"></div>
+            <div class="decorative-divider"></div>
+            <div class="decorative-right"></div>
+        </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal9" id="videoModal">
+            <div class="modal-content9">
+                <span class="modal-close9">Tutup</span>
+                <iframe id="videoIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+      
+         <section id="building" class="section10">
+            <div class="content-wrapper-10">
+                <h2>
+                    Macem-macem Acara Taunan lan Bulanan <br class="hidden lg:block" />
+                    <span class="highlight">Kacirebonan</span>
+                </h2>
+                <p>
+                    Panggonan sing paling cocok kanggo ngadani pagelaran seni, mantènan adat, lan pameran budaya Cirebon nganggo sentuhan modhèran lan fasilitas sing komplit.
+                </p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-images">
+                    <img src="./assets/fest1.jpg" alt="Festival Keraton Nusantara Cirebon" class="active">
+                    <img src="./assets/fest2.jpg" alt="Sekaten Cirebon">
+                    <img src="./assets/fest3.jpg" alt="Festival Batik Mega Mendung">
+                    <img src="./assets/fest4.jpeg" alt="Festival Jalur Rempah">
+                    <img src="./assets/fest5.jpg" alt="Hari jadi Cirebon">
+                </div>
+                <div class="support-info">
+                    <p>Cirebon</p>
+                </div>
+                <button class="carousel-nav prev">←</button>
+                <button class="carousel-nav next">→</button>
+                <div class="overlay-text">
+                    <h3 id="carousel-title">Festival Keraton Nusantara Cirebon</h3>
+                    <p id="carousel-desc">Kegiatan iki dianakna rutin déning kraton-kraton ing Cirebon kanggo ngenalna budaya lan warisané</p>
+                </div>
+            </div>
+            <div id="modal-build" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <p>Modal Build Placeholder</p>
+                    <button onclick="document.getElementById('modal-build').style.display='none'">Close</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="kuliner" class="section11">
+            <div class="vertical-line-left"></div>
+            <div class="vertical-line-right"></div>
+            <div class="content-wrapper-11">
+                <h1>Ragam Panganan Cirebon, <span class="span">Nggawé Momenmu Ora Kalis Lali</span></h1>
+                <div class="menu-container" onclick="document.getElementById('cirebon-menu-modal').style.display='block'">
+                    <h2>Panganan & Ombenan Khas Cirebon</h2>
+                    <p>Menu Lengkap kanggé 900 Tamu</p>
+                    <div class="divider"></div>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <span>Empal Gentong</span>
+                            Sup daging sapi nganggo kuah santan lan rempah khas.
+                        </li>
+                        <li class="menu-item">
+                            <span>Nasi Jamblang</span>
+                            Sega dibungkus godhong jati karo lauk tradhisional.
+                        </li>
+                        <li class="menu-item">
+                            <span>Tahu Gejrot</span>
+                            Tahu digoreng nganggo kuah pedes lan legi sing seger.
+                        </li>
+                        <li class="menu-item">
+                            <span>Docang</span>
+                            Sayur khas nganggo bumbu kacang lan klapa parut.
+                        </li>
+                        <li class="menu-item">
+                            <span>Mi Koclok</span>
+                            Mie nganggo kuah kaldu pitik kentel karo suwiran daging pitik.
+                        </li>
+                        <li class="menu-item">
+                            <span>Sate Kalong</span>
+                            Sate wedhus nganggo bumbu kecap legi pedes.
+                        </li>
+                        <li class="menu-item">
+                            <span>Nasi Lengko</span>
+                            Sega nganggo sayuran seger lan sambel kacang khas Cirebon.
+                        </li>
+                        <li class="menu-item">
+                            <span>Rabeg</span>
+                            Gulai wedhus khas Cirebon sing gurih lan kebak rempah.
+                        </li>
+                        <li class="menu-item">
+                            <span>Gado-Gado Cirebon</span>
+                            Salad sayur nganggo bumbu kacang khas Cirebon.
+                        </li>
+                        <li class="menu-item">
+                            <span>Lotek</span>
+                            Sayur mateng nganggo sambel kacang, meh padha karo gado-gado tapi khas Cirebon.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="cirebon-menu-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <p>Menu Cirebon (Placeholder)</p>
+                    <button onclick="document.getElementById('cirebon-menu-modal').style.display='none'">Tutup</button>
+                </div>
+            </div>
+        </section>
+
+
+       <section class="section12" id="alatMusik">
+            <div class="content-wrapper-12">
+                <h1>Piranti Musik Khas Cirebon</h1>
+                <div class="decor-container">
+                    <div class="decor-left">
+                        <div class="curve-left"></div>
+                        <div class="vertical-divider"></div>
+                        <div class="curve-right"></div>
+                    </div>
+                    <div class="content-right">
+                        <h2>Gamelan Sekaten Cirebon</h2>
+                        <p>Gamelan Sekaten ing Cirebon iku bagéan saka tradhisi budaya sing raket gandhengané karo dakwah lan syiar Islam, utamané nalika perayaan Maulid Nabi. Gamelan iki dipagelaraké neng Keraton Kasepuhan lan Keraton Kanoman.</p>
+                        <div class="link-button">
+                        </div>
+                        <div class="image-grid">
+                            <img src="./assets/gamelan2.jpg" alt="gamelan">
+                            <img src="./assets/gamelan.jpg" alt="gamelan">
+                            <div class="grid-line-horizontal top-20"></div>
+                            <div class="grid-line-horizontal top-40"></div>
+                            <div class="grid-line-horizontal top-60"></div>
+                            <div class="grid-line-horizontal top-80"></div>
+                            <div class="grid-line-vertical left-15"></div>
+                            <div class="grid-line-vertical left-30"></div>
+                            <div class="grid-line-vertical left-50"></div>
+                            <div class="grid-line-vertical left-70"></div>
+                            <div class="grid-line-vertical left-85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section13">
+            <div class="content-wrapper-13">
+                <h1>Walangsungsang, 1418 M</h1>
+                <div class="content-grid">
+                    <div class="image-container">
+                        <img src="./assets/cakrabuana.jpg" alt="photo-picture" loading="lazy" draggable="false" oncontextmenu="return false;">
+                    </div>
+                    <div class="text-container">
+                        <div class="main-text">
+                            <div class="main-text-header">
+                                <p>Sultan pisanan saka keraton Cirebon</p>
+                                <p class="pangeran">Pangeran Cakrabuana</p>
+                            </div>
+                            <p class="anak">Putrané Prabu Siliwangi (Raja Pajajaran) karo Subang Larang (siji Muslimah asal Karawang). Diprakirakné wiwit mbangun Cirebon watara taun 1445 M, lan dadi pamimpin wilayah pesisir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="vertical-line"></div>
+        <section class="section14">
+            <div class="content-wrapper-14">
+                <h3>Kacirebonan ing Donya Digital</h3>
+                <p>Golèk jawaban bab budaya, wisata, lan kabéh warisan khas Cirebon ing jaman saiki.</p>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleCollapse(1)">
+                        <span>Opo bedané budaya Cirebon karo daerah liya?</span>
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <div class="faq-answer" id="faq-1">
+                        <p>Cirebon iku titik temu antarane budaya Jawa, Sunda, Tionghoa, Arab, lan Islam. Kacermin saka tari Topeng Cirebon, batik Mega Mendung, basa Cirebon sing khas, nganti arsitèktur keraton sing campuran lokal lan manca.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleCollapse(2)">
+                        <span>Kepiyé carané ngenal budaya Cirebon sacara digital?</span>
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <div class="faq-answer" id="faq-2">
+                        <p>Sakiki wis akèh sumber digital kaya tur virtual keraton, channel YouTube komunitas budaya, akun Instagram batik Cirebon, lan arsip digital naskah kuna lan kasenian lokal. Akeh acara uga disiarke online, maring gampang diakses saka endi wae.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleCollapse(3)">
+                        <span>Opo wae papan wisata sejarah sing kudu dikunjungi?</span>
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <div class="faq-answer" id="faq-3">
+                        <p>Antarané: Keraton Kacirebonan, Taman Sari Gua Sunyaragi, Masjid Agung Sang Cipta Rasa, lan Makam Sunan Gunung Jati. Kabeh panggonan iku nduwèni nilai sejarah sing dhuwur lan arsitèktur unik.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleCollapse(4)">
+                        <span>Opo panganan khas Cirebon sing isa dipromosikaké lewat digital?</span>
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <div class="faq-answer" id="faq-4">
+                        <p>Wis akèh konten kreator kuliner ngangkat panganan khas Cirebon kaya empal gentong, nasi jamblang, tahu gejrot, lan docang. Malah resepé wis ana ing bentuk video tutorial ing YouTube lan TikTok.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleCollapse(5)">
+                        <span>Kepiyé carané aku ndhukung pelestarian budaya Cirebon?</span>
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                    <div class="faq-answer" id="faq-5">
+                        <p>Kowé isa melu ndhukung UMKM batik lan kriya lokal, nuduhaké konten budaya neng medsos, utawa teka langsung ing acara budaya – offline utawa online. Anak enom dadi kunci nyangga Cirebon ning donya digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="content-wrapper-footer">
+                <div class="footer-logo">
+                    <h2 id="xpresensi-text">JagatCirebon</h2>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <p>Seni & Adat</p>
+                        <ul>
+                            <li>Tari Topeng Cirebon</li>
+                            <li>Wayang Golek Cepak</li>
+                            <li>Upacara Panjang Jimat</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <p>Panganan Khas</p>
+                        <ul>
+                            <li>Nasi Jamblang</li>
+                            <li>Empal Gentong</li>
+                            <li>Tahu Gejrot & Docang</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <p>Warisan & Kriya</p>
+                        <ul>
+                            <li>Batik Trusmi</li>
+                            <li>Kriya Kerang</li>
+                            <li>Senjata Kujang Cirebon</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="footer-bottom">
+            <small>#JagatCirebon — Nglayari Budaya Nusantara secara Digital</small>
+            <div class="back-to-top" onclick="scrollToTop()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 18V6M6 12l6-6 6 6" stroke="black" stroke-width="1" fill="none" />
+                </svg>
+            </div>
+        </div>
+
+
+            <!-- Opening Modal -->
+            <div id="opening-modal" class="modal" style="display: none;">
+                <section class="modal-overlay">
+                    <div class="modal-content" id="modal-content">
+                        <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr4.svg" alt="gradient" class="gradient gr3">
+                        <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr.svg" alt="gradient1" class="gradient gr1">
+                        <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr2.svg" alt="gradient2" class="gradient gr2">
+                        <div id="step-0" class="modal-step">
+                            <div class="modal-text">
+                                <h2 class="modal-title">Yuk ngawitan nyusur Cirebon digital</h2>
+                                <p class="modal-description">Miwiti lelungan budaya Cirebon ing jagad digital. Saben warisan budaya pantes dipunjelajahi kanthi apik lan modern.</p>
+                                <div class="modal-divider"></div>
+                                <ul class="modal-list">
+                                    <li>Tentang Kacirebonan</li>
+                                    <li>Musik dan Kesenian Tradisional</li>
+                                    <li>Cerita dan Legenda Cirebon</li>
+                                    <li>Wisata Budaya Virtual</li>
+                                    <li>Tokoh dan Inspirasi Budaya</li>
+                                </ul>
+                            </div>
+                            <div class="modal-nav">
+                                <div class="nav-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                </div>
+                                <button onclick="showStep(1)" class="modal-button">Sakteruse</button>
+                            </div>
+                        </div>
+                        <div id="step-1" class="modal-step" style="display: none;">
+                            <div class="modal-image">
+                                <img src="./assets/kraton.jpg" alt="Keraton Cirebon" loading="lazy">
+                            </div>
+                            <div class="modal-text2">
+                                <h2 class="modal-title">Pesona Kacirebonan ing Jagad Digital</h2>
+                                <p class="modal-description">Nyusur warisan budaya Cirebon, saka Keraton nganti batik Mega Mendung, kanthi sentuhan digital sing nggawa harmoni tradisi lan modernitas.</p>
+                            </div>
+                            <div class="modal-nav2">
+                                <button onclick="showStep(0)" class="modal-button">Balik</button>
+                                <button onclick="closeOpeningModal()" class="modal-button">Sakteruse Nyusur</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Modal Build -->
+            <div id="modal-build" class="modal" style="display: none;">
+                <!-- Placeholder for ModalBuild -->
+                <div class="modal-content">
+                    <p>Modal Build Placeholder</p>
+                    <button onclick="closeModalBuild()">Close</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal2" id="modal2">
+            <div class="modal-content2">
+                <span class="close-button2">×</span>
+                <h3 id="modal-title2"></h3>
+                <p id="modal-description2"></p>
+            </div>
+        </div>
+
+        <script>
+        // Data for each category
+        const data = {
+            kesenian: {
+                title: "Kesenian Tradisional Cirebon",
+                items: [
+                    "Tari Topeng Cirebon",
+                    "Wayang Kulit Cirebon",
+                    "Seni Tarling",
+                    "Gamelan Cirebon",
+                    "Seni Lukis Kaca",
+                    "Seni Batik",
+                    "Seni Musik Tradisional",
+                    "Seni Teater Tradisional",
+                    "Seni Kaligrafi"
+                ]
+            },
+            keraton: {
+                title: "Keraton di Cirebon",
+                items: [
+                    "Keraton Kasepuhan",
+                    "Keraton Kanoman",
+                    "Keraton Kacirebonan",
+                    "Keraton Keprabon"
+                ]
+            },
+            batik: {
+                title: "Motif Batik Khas Cirebon",
+                items: [
+                    "Motif Mega Mendung",
+                    "Motif Wadasan",
+                    "Motif Paksi Naga Liman",
+                    "Motif Patran Keris",
+                    "Motif Singa Payung",
+                    "Motif Taman Arum",
+                    "Motif Kapal Kandas",
+                    "Motif Naga Seba",
+                    "Motif Burung Hong",
+                    "Motif Kembang Sepatu",
+                    "Motif Teratai",
+                    "Motif Kawung",
+                    "Motif Parang Rusak",
+                    "Motif Sumping",
+                    "Motif Gunung Giwur",
+                    "Motif Sawat",
+                    "Motif Ceplok",
+                    "Motif Truntum"
+                ]
+            },
+            makanan: {
+                title: "Makanan Khas Cirebon",
+                items: [
+                    "Nasi Jamblang",
+                    "Empal Gentong",
+                    "Tahu Gejrot",
+                    "Docang",
+                    "Sate Kalong",
+                    "Mie Koclok",
+                    "Nasi Lengko",
+                    "Bubur Sop Ayam",
+                    "Kerupuk Melarat",
+                    "Sirup Tjampolay"
+                ]
+            }
+        };
+
+        // Get modal elements
+        const modalCRB = document.getElementById('infoModal');
+        const modalList = document.getElementById('modalList');
+        const closeButtonCRB = document.querySelector('.close-buttonCRB');
+        const buttonsCRB = document.querySelectorAll('.button8');
+
+        // Add click event to each button
+        buttonsCRB.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                const categoryData = data[category];
+
+                // Set modal content
+                modalList.innerHTML = '';
+                categoryData.items.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    modalList.appendChild(li);
+                });
+
+                // Show modal
+                modalCRB.style.display = 'flex';
+            });
+        });
+
+        // Close modal when close button is clicked
+        closeButtonCRB.addEventListener('click', () => {
+            modalCRB.style.display = 'none';
+        });
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === modalCRB) {
+                modalCRB.style.display = 'none';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modalCRB.style.display === 'flex') {
+                modalCRB.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoButtons = document.querySelectorAll('.button-container9');
+            const modal = document.getElementById('videoModal');
+            const videoIframe = document.getElementById('videoIframe');
+            const closeModal = document.querySelector('.modal-close9');
+
+            // Open modal with video
+            videoButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const card = this.closest('.card');
+                    const videoUrl = card.getAttribute('data-video');
+                    if (videoUrl) {
+                        videoIframe.setAttribute('src', videoUrl);
+                        modal.classList.add('active');
+                        document.body.classList.add('modal-open');
+                    }
+                });
+            });
+
+            // Close modal
+            closeModal.addEventListener('click', function () {
+                modal.classList.remove('active');
+                videoIframe.setAttribute('src', ''); // Stop video
+                document.body.classList.remove('modal-open');
+            });
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    videoIframe.setAttribute('src', ''); // Stop video
+                    document.body.classList.remove('modal-open');
+                }
+            });
+
+            // Highlight current page in navbar
+            const navLinks = document.querySelectorAll('.navbar-menu a');
+            function setCurrentLink() {
+                const currentHash = window.location.hash || '';
+                const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+                navLinks.forEach(link => {
+                    link.classList.remove('current');
+                    const href = link.getAttribute('href');
+                    if ((href.includes('#cerita') && currentHash === '#cerita') || href === currentPath) {
+                        link.classList.add('current');
+                    }
+                });
+            }
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(l => l.classList.remove('current'));
+                    this.classList.add('current');
+                });
+            });
+            setCurrentLink();
+            window.addEventListener('hashchange', setCurrentLink);
+        });
+    </script>
+
+   <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav .menu ul li a, .sidebar ul li a');
+            let isScrolling = false;
+
+            // Function to set the current link
+            function setCurrentLink(hash) {
+                navLinks.forEach(link => link.classList.remove('current'));
+                if (hash && hash !== '#') {
+                    navLinks.forEach(link => {
+                        if (link.getAttribute('href') === hash) {
+                            link.classList.add('current');
+                        }
+                    });
+                }
+            }
+
+            // Handle clicks on navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    setCurrentLink(href);
+                    // Allow default behavior (scroll to section)
+                });
+            });
+
+            // Handle initial load and hash changes
+            function handleHashChange() {
+                const currentHash = window.location.hash || '#';
+                setCurrentLink(currentHash);
+            }
+            handleHashChange();
+            window.addEventListener('hashchange', handleHashChange);
+
+            // Debounce scroll event
+            function debounce(func, wait) {
+                let timeout;
+                return function (...args) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(this, args), wait);
+                };
+            }
+
+            // Handle scroll to update current link
+            window.addEventListener('scroll', debounce(function () {
+                if (isScrolling) return; // Skip if scrolling programmatically
+                const sections = document.querySelectorAll('section[id]');
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop - 50) { // Adjusted threshold
+                        currentSection = '#' + section.getAttribute('id');
+                    }
+                });
+
+                // Only update if different from current hash
+                if (currentSection && currentSection !== window.location.hash) {
+                    setCurrentLink(currentSection);
+                }
+            }, 100));
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Progress Bar and Opening Modal Logic with LocalStorage
+            const progressFill = document.querySelector('#progress-fill');
+            const containerLoad = document.querySelector('.container-load');
+            const mainContent = document.querySelector('#main-content');
+            const openingModal = document.getElementById('opening-modal');
+            const TOKEN_KEY = 'jagatCirebonVisited';
+
+            // Debug: Log token status and initial body class
+            const hasVisited = localStorage.getItem(TOKEN_KEY);
+            console.log(`Token '${TOKEN_KEY}' exists: ${hasVisited}`);
+            console.log(`Initial body classList: ${document.body.classList}`);
+
+            if (!hasVisited) {
+                // First visit: Show loading screen and modal
+                console.log('First visit: Showing container-load and opening-modal');
+                containerLoad.style.display = 'flex';
+                openingModal.style.display = 'flex';
+                document.body.classList.add('modal-open'); // Disable scrolling
+                console.log('Added modal-open class to body');
+
+                let progress = 0;
+                progressFill.style.width = '0%';
+
+                function updateProgress(newProgress) {
+                    progress = Math.max(0, Math.min(newProgress, 100));
+                    progressFill.style.width = `${progress}%`;
+                    console.log(`Progress bar: ${progress}%`);
+
+                    if (progress >= 100) {
+                        containerLoad.style.display = 'none';
+                        mainContent.style.display = 'block';
+                        // Save token after progress completes
+                        localStorage.setItem(TOKEN_KEY, 'true');
+                        console.log('Token saved after progress complete');
+                        // Ensure modal-open is removed
+                        document.body.classList.remove('modal-open');
+                        console.log('Removed modal-open class after progress complete');
+                    }
+                }
+
+                // Simulate progress (20% every 400ms)
+                let simulatedProgress = 0;
+                const interval = setInterval(() => {
+                    simulatedProgress += 20;
+                    updateProgress(simulatedProgress);
+                    if (simulatedProgress >= 100) {
+                        clearInterval(interval);
+                    }
+                }, 400);
+
+                // Update closeOpeningModal to save token and restore scrolling
+                window.closeOpeningModal = function() {
+                    openingModal.style.display = 'none';
+                    document.body.classList.remove('modal-open');
+                    console.log('Removed modal-open class after modal closed');
+                    // Save token when modal is closed
+                    localStorage.setItem(TOKEN_KEY, 'true');
+                    console.log('Token saved after modal closed');
+                    // Ensure main content is visible if not already
+                    if (progress < 100) {
+                        containerLoad.style.display = 'none';
+                        mainContent.style.display = 'block';
+                    }
+                };
+            } else {
+                // Returning visit: Skip loading screen and modal
+                console.log('Returning visit: Hiding container-load and opening-modal');
+                containerLoad.style.display = 'none';
+                openingModal.style.display = 'none';
+                mainContent.style.display = 'block';
+                // Ensure modal-open is removed
+                document.body.classList.remove('modal-open');
+                console.log('Ensured modal-open class is removed for returning visit');
+
+                // Inject CSS to force modal to stay hidden
+                const style = document.createElement('style');
+                style.id = 'modal-hider';
+                style.textContent = `#opening-modal { display: none !important; }`;
+                document.head.appendChild(style);
+                console.log('Injected CSS to force hide opening-modal');
+
+                // Mutation observer to prevent modal from being shown
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.attributeName === 'style' && openingModal.style.display !== 'none') {
+                            console.log('Detected attempt to show opening-modal; forcing hide');
+                            openingModal.style.display = 'none';
+                            document.body.classList.remove('modal-open');
+                            console.log('Removed modal-open class due to mutation');
+                        }
+                    });
+                });
+                observer.observe(openingModal, { attributes: true });
+
+                // Fallback: Force restore scrolling
+                document.body.style.overflow = 'auto';
+                console.log('Forced body overflow to auto to restore scrolling');
+            }
+
+            // Existing modal step navigation
+            window.showStep = function(step) {
+                document.getElementById('step-0').style.display = step === 0 ? 'block' : 'none';
+                document.getElementById('step-1').style.display = step === 1 ? 'block' : 'none';
+                const dots = document.querySelectorAll('.nav-dots .dot');
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === step));
+            };
+        });
+    </script>
+
+    <script>
+        // JavaScript for image animation, active item handling, and dynamic Google Maps button
+        const listItems3 = document.querySelectorAll('.list-item');
+        const handphoneImg3 = document.querySelector('.handphone-img');
+        const googleMapsLink = document.getElementById('google-maps-link');
+
+        const content3 = {
+            'kasepuhan': {
+                title: 'Keraton Kasepuhan',
+                mapQuery: 'Keraton+Kasepuhan+Cirebon'
+            },
+            'kanoman': {
+                title: 'Keraton Kanoman',
+                mapQuery: 'Keraton+Kanoman+Cirebon'
+            },
+            'sunyaragi': {
+                title: 'Gua Sri Sunyaragi',
+                mapQuery: 'Gua+Sri+Sunyaragi+Cirebon'
+            },
+            'masjid-agung': {
+                title: 'Masjid Agung',
+                mapQuery: 'Masjid+Agung+Sang+Cipta+Rasa+Cirebon'
+            },
+            'batik-trusmi': {
+                title: 'Pasar Batik Trusmi',
+                mapQuery: 'Pasar+Batik+Trusmi+Cirebon'
+            }
+        };
+
+        let currentSiteId = 'kasepuhan'; // Default selection
+
+        // Initialize Google Maps button with default
+        googleMapsLink.href = `https://www.google.com/maps/search/?api=1&query=${content3[currentSiteId].mapQuery}`;
+        googleMapsLink.childNodes[0].textContent = `Lihat di Google Maps ${content3[currentSiteId].title}`;
+
+        listItems3.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all items
+                listItems3.forEach(i => i.classList.remove('active'));
+                // Add active class to clicked item
+                item.classList.add('active');
+                // Update current site ID
+                currentSiteId = item.getAttribute('data-site');
+                // Change image source and alt text
+                const newImage = item.getAttribute('data-image');
+                const newAlt = item.textContent.trim();
+                handphoneImg3.src = newImage;
+                handphoneImg3.alt = newAlt;
+                setTimeout(() => {
+                    handphoneImg3.classList.add('visible');
+                }, 100);
+                // Update Google Maps button
+                googleMapsLink.href = `https://www.google.com/maps/search/?api=1&query=${content3[currentSiteId].mapQuery}`;
+                googleMapsLink.childNodes[0].textContent = `Lihat di Google Maps ${content3[currentSiteId].title}`;
+            });
+        });
+    </script>
+
+    <script>
+        const listItems = document.querySelectorAll('.list-item');
+        const handphoneImg = document.querySelector('.handphone-img');
+
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all items
+                listItems.forEach(i => i.classList.remove('active'));
+                // Add active class to clicked item
+                item.classList.add('active');
+                // Change image source and alt text
+                const newImage = item.getAttribute('data-image');
+                const newAlt = item.textContent;
+                handphoneImg.src = newImage;
+                handphoneImg.alt = newAlt;
+            });
+        });
+    </script>
+    <script>
+        const modal = document.getElementById('modal2');
+        const modalTitle = document.getElementById('modal-title2');
+        const modalDescription = document.getElementById('modal-description2');
+        const closeButton = document.querySelector('.close-button2');
+        const buttons = document.querySelectorAll('.arts-button');
+
+        const content = {
+            'tarling': {
+                title: 'Tarling Cirebonan',
+                description: 'Tarling Cirebonan minangka kesenian musik tradisional khas Cirebon sing nggabungake alat musik suling lan gitar kanthi vokal sing unik. Kesenian iki asalé saka pesisir Cirebon lan asring nggambarake crita-crita sosial, cinta, lan kasangsaran masyarakat lokal. Tarling dikenal amarga irama sing lembut nanging ekspresif, nggawa nuansa budaya pesisir sing kaya lan dinamis.'
+            },
+            'tari-topeng': {
+                title: 'Tari Topeng',
+                description: 'Tari Topeng Cirebon minangka salah sawijining bentuk tari tradisional sing misuwur ing Jawa Barat. Tari iki nggunakake topeng kanthi karakter sing béda-béda, saben topeng nggambarake karakter lan crita sing unik. Gerakan tari sing alus lan penuh makna iki asring nggawa filosofi urip, kayata kasetyan, keberanian, utawa kasangsaran. Tari Topeng uga asring dipentaske ing upacara adat lan festival budaya.'
+            },
+            'genjring': {
+                title: 'Genjring',
+                description: 'Genjring minangka kesenian musik ritmis sing asalé saka Cirebon, nggunakake alat musik perkusi kayata kendang, rebana, lan genjring. Kesenian iki asring dipentaske kanggo nyanyi lagu-lagu religius utawa sosial, nggambarake semangat komunitas lan solidaritas. Irama sing dinamis lan energetik ndadekake Genjring dadi salah sawijining kesenian sing disenengi ing acara-acara rakyat lan upacara tradisional.'
+            }
+        };
+
+        buttons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modalId = button.getAttribute('data-modal');
+                modalTitle.textContent = content[modalId].title;
+                modalDescription.textContent = content[modalId].description;
+                modal.style.display = 'flex';
+                document.body.classList.add('modal-open'); // Add class to disable scrolling
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.classList.remove('modal-open'); // Remove class to restore scrolling
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.classList.remove('modal-open'); // Remove class to restore scrolling
+            }
+        });
+    </script>
+
+    <!-- JS -->
+    <script>
+        // Progress Bar Logic
+        let progress = 0;
+        const progressFill = document.querySelector('#progress-fill');
+        const containerLoad = document.querySelector('.container-load');
+        const mainContent = document.querySelector('#main-content');
+
+        // Initialize progress bar to 0%
+        progressFill.style.width = '%';
+
+        function updateProgress(newProgress) {
+            progress = Math.max(0, Math.min(newProgress, 100)); // Clamp between 0 and 100
+            progressFill.style.width = `${progress}%`;
+            console.log(`Progress bar: ${progress}%`); // Debug log
+
+            // Hide loading screen and show main content when progress reaches 100%
+            if (progress >= 100) {
+                containerLoad.style.display = 'none';
+                mainContent.style = 'block';
+            };
+        }
+
+        // Simulate progress
+        let simulatedProgress = 0;
+        const interval2 = setInterval(() => {
+            simulatedProgress += 20; // Increment by 40
+            updateProgress(simulatedProgress);
+            if (simulatedProgress >= 100) {
+                clearInterval(interval2);
+            };
+        }, 400);
+    </script>
+    <script>
+        function showStep(step) {
+            document.getElementById('step-0').style.display = step === 0 ? 'block' : 'none';
+            document.getElementById('step-1').style.display = step === 1 ? 'block' : 'none';
+            const dots = document.querySelectorAll('.nav-dots .dot');
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === step));
+        }
+
+        function closeOpeningModal() {
+            document.getElementById('opening-modal').style.display = 'none';
+        }
+    </script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script>
+        let activeIndex = null;
+
+        function toggleCollapse(index) {
+            const answer = document.getElementById(`faq-${index}`);
+            if (activeIndex === index) {
+                answer.classList.remove('active');
+                activeIndex = null;
+            } else {
+                if (activeIndex !== null) {
+                    document.getElementById(`faq-${activeIndex}`).classList.remove('active');
+                }
+                answer.classList.add('active');
+                activeIndex = index;
+            }
+        }
+    </script>
+    <script>
+        const images = [
+            {
+                src: "/fest1.jpg",
+                title: "Festival Keraton Nusantara Cirebon",
+                desc: "Diadakan secara rutin oleh kraton-kraton di Cirebon untuk mempromosikan budaya dan warisan mereka."
+            },
+            {
+                src: "/fest2.jpg",
+                title: "Sekaten Cirebon",
+                desc: "Sekaten diadakan dengan gamelan Sekaten dan pasar rakyat."
+            },
+            {
+                src: "/fest3.jpg",
+                title: "Festival Batik Mega Mendung",
+                desc: "Acara ini memang ada sebagai bentuk promosi dan pelestarian batik khas Cirebon."
+            },
+            {
+                src: "/fest4.jpeg",
+                title: "Festival Jalur Rempah",
+                desc: "Mengenang jalur perdagangan rempah Nusantara melalui seni."
+            },
+            {
+                src: "/fest5.jpg",
+                title: "Hari jadi Cirebon",
+                desc: "Acara dalam rangka memperingati terbentuknya wilayah Cirebon."
+            }
+        ];
+
+        let currentIndex = 0;
+        const carouselImages = document.querySelectorAll('.carousel-images img');
+        const titleElement = document.getElementById('carousel-title');
+        const descElement = document.getElementById('carousel-desc');
+        const prevButton = document.querySelector('.carousel-nav.prev');
+        const nextButton = document.querySelector('.carousel-nav.next');
+
+        function showImage(index) {
+            carouselImages.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+            titleElement.textContent = images[index].title;
+            descElement.textContent = images[index].desc;
+        }
+
+        showImage(currentIndex);
+
+        const interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }, 3000);
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+
+        window.addEventListener('unload', () => {
+            clearInterval(interval);
+        });
+    </script>
+    <script>
+        function toggleGallery() {
+        const popup = document.getElementById('galleryPopup');
+        popup.classList.toggle('active');
+        }
+
+        // Prevent context menu on images
+        document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Carousel Functionality
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+            });
+        }
+
+        // Initial display
+        showImage(currentIndex);
+
+        // Autoplay
+        const interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }, 3000);
+
+        // Manual Navigation
+        const prevButton = document.querySelector('.nav-button.prev');
+        const nextButton = document.querySelector('.nav-button.next');
+
+        if (!prevButton || !nextButton) {
+            console.error('Navigation buttons not found');
+            return;
+        }
+
+        prevButton.addEventListener('click', () => {
+            console.log('Prev button clicked');
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            console.log('Next button clicked');
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+
+        // Cleanup
+        window.addEventListener('unload', () => {
+            clearInterval(interval);
+        });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('Button clicked:', button.textContent);
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('Button clicked: Play video');
+            });
+        });
+    </script>
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</body>
+</html>
