@@ -2549,6 +2549,7 @@ a {
         width: 100%;
         display: flex;
         flex-direction: column;
+        margin-top: 26px;
         align-items: center;
         justify-content: center;
         padding-bottom: 24px;
@@ -4598,7 +4599,8 @@ cursor: pointer;
     }
 
     .sidebar ul li {
-        font-size: 1em;
+        font-size: 1.1em;
+        padding-bottom: 14px;
     }
 
     .image-container {
@@ -4635,7 +4637,7 @@ cursor: pointer;
         position: relative;
         width: 100vw;
         height: 90vh;
-        margin-bottom: 60px;
+        margin-bottom: 0px;
     }
 
     .culture-tag {
@@ -4696,8 +4698,48 @@ cursor: pointer;
         z-index: 50;
     }
 
+    .modal-content2 h3 {
+        font-size: 1.4em;
+    }
+
+    .bottom-section {
+        position: relative;
+        width: 100%;
+        min-height: 50%;
+        padding: 1.4rem 1.5rem 1.6rem;
+    }
+
+    .arts-button {
+        width: 100%;
+    }
+
+    .modal-content9 {
+        width: 94vw;
+        padding: 1rem;
+        max-width: 98vw;
+        height: 60vh;
+    }
+
+    .modal9 iframe {
+        height: 88%;
+    }
+
     .modal-content {
         width: 90vw;
         height: 90vh;
+    }
+
+    .section9 .card {
+        height: max-content;
+        padding-bottom: 16px;
+    }
+
+    .item { 
+        margin-top: 0;
+    }
+
+    .link-button { 
+        top: 8px;
+        right: 8px;
     }
 }
