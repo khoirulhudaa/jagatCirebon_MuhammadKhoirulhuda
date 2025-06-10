@@ -2595,10 +2595,6 @@ a {
             padding: 20px 18px;
             align-items: start;
         }
-
-        .button8 {
-            width: 100%;
-        }
     }
 
     .item h2 {
@@ -4777,6 +4773,25 @@ cursor: pointer;
         text-align: left;
         align-items: start;
         justify-content: start;
+    }
+
+    .gallery-button {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 0.875rem 1rem;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: #f97316;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 1.25rem;
+    }
+
+     .button8 {
+        width: 100%;
     }
 }
 
