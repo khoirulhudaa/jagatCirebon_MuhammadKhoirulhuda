@@ -1412,43 +1412,43 @@
     </script>
     <script>
         function showStep(step) {
-    document.getElementById('step-0').style.display = step === 0 ? 'block' : 'none';
-    document.getElementById('step-1').style.display = step === 1 ? 'block' : 'none';
-    const dots = document.querySelectorAll('.nav-dots .dot');
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === step));
-}
+            document.getElementById('step-0').style.display = step === 0 ? 'block' : 'none';
+            document.getElementById('step-1').style.display = step === 1 ? 'block' : 'none';
+            const dots = document.querySelectorAll('.nav-dots .dot');
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === step));
+        }
 
-function closeOpeningModal() {
-    document.getElementById('opening-modal').style.display = 'none';
-    localStorage.setItem('play', 'true');
-    playAudio();
-}
+        function closeOpeningModal() {
+            document.getElementById('opening-modal').style.display = 'none';
+            localStorage.setItem('play', 'true');
+            playAudio();
+        }
 
-function playAudio() {
-    const audio = document.getElementById('background-audio');
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-        playPromise.catch(error => {
-            console.error('Audio playback failed:', error);
-            // Fallback: Wait for user interaction to play audio
-            document.addEventListener('click', function tryPlayAudio() {
-                audio.play().catch(err => console.error('Retry audio playback failed:', err));
-                document.removeEventListener('click', tryPlayAudio);
-            }, { once: true });
+        function playAudio() {
+            const audio = document.getElementById('background-audio');
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.error('Audio playback failed:', error);
+                    // Fallback: Wait for user interaction to play audio
+                    document.addEventListener('click', function tryPlayAudio() {
+                        audio.play().catch(err => console.error('Retry audio playback failed:', err));
+                        document.removeEventListener('click', tryPlayAudio);
+                    }, { once: true });
+                });
+            }
+        }
+
+        // Check localStorage on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('opening-modal');
+            if (localStorage.getItem('play') === 'true') {
+                modal.style.display = 'none'; // Skip modal if play is true
+                playAudio(); // Attempt to play audio
+            } else {
+                modal.style.display = 'block'; // Show modal on first visit
+            }
         });
-    }
-}
-
-// Check localStorage on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('opening-modal');
-    if (localStorage.getItem('play') === 'true') {
-        modal.style.display = 'none'; // Skip modal if play is true
-        playAudio(); // Attempt to play audio
-    } else {
-        modal.style.display = 'block'; // Show modal on first visit
-    }
-});
     </script>
     <script>
         function scrollToTop() {

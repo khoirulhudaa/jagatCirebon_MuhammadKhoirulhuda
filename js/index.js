@@ -68,7 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (audio) {
         audio.volume = 0.75;
         audio.muted = false;
+        audio.play().catch(error => {
+            console.error('Error playing audio:', error);
+        });
     }
+        window.scrollTo(0, 0);
+        // Initialize Feather Icons
+        feather.replace();
+    });
 
     // Loading progress
     const monitorResources = () => {
