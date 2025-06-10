@@ -375,7 +375,7 @@
 
         @media screen and (max-width: 650px) {
             .tokoh-section {
-                padding: 5rem 20px;
+                padding: 5rem 20px 2rem 20px;
             }
 
             .footer {
@@ -417,8 +417,10 @@
     </style>
 </head>
 <body>
+
+    <audio id="background-audio" src="./assets/audio/audio.mp3" autoplay loop></audio>
+   
     <!-- Navbar -->
-     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-logo" id="xpresensi-text">JagaCirebon</a>
@@ -431,7 +433,6 @@
     </nav>
 
     <!-- Audio -->
-    <audio id="background-audio" class="audio-hidden" src="/audio/cirebon-history.mp3" autoplay></audio>
 
     <!-- Gradient Images -->
     <img src="./assets/gr.svg" alt="gradient1" class="gr1" draggable="false" oncontextmenu="return false;">
@@ -524,9 +525,9 @@
         <div class="footer-container">
             <p>© 2025 JagaCirebon. Hak cipta dilindungi.</p>
             <ul class="footer-links">
+                <li><a href="index.html">Laman utama</a></li>
                 <li><a href="about.html">Tentang</a></li>
                 <li><a href="kontak.hmtl">Kontak</a></li>
-                <li><a href="index.html">Halaman utama</a></li>
             </ul>
         </div>
     </footer>
