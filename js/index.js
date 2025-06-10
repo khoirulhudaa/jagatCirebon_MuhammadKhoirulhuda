@@ -72,10 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error playing audio:', error);
         });
     }
-        window.scrollTo(0, 0);
-        // Initialize Feather Icons
-        feather.replace();
-    });
 
     // Loading progress
     const monitorResources = () => {

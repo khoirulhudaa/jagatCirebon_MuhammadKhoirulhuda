@@ -4675,8 +4675,10 @@ cursor: pointer;
         background-color: #ffffff;
         color: #000000;
         width: 100%;
+        text-align: left;
         background-color: #f97316;
         color: white;
+        justify-content: start; 
         margin-bottom: 6px;
         margin-left: 0px;
         border: 1px solid white;
@@ -4769,6 +4771,12 @@ cursor: pointer;
         font-size: 15px;
         line-height: 1.5;
         width: 94%;
+    }
+
+    .hero-button {
+        text-align: left;
+        align-items: start;
+        justify-content: start;
     }
 }
 
