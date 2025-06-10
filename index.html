@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-     <div class="container-load">
+     <!-- Audio -->
+    <audio id="background-audio" src="./assets/audio/audio.mp3" autoplay loop></audio>
+     
+    <div class="container-load">
         <img
             loading="lazy"
             draggable="false"
@@ -69,9 +72,6 @@
     </div>
 
     <main id="main-content" class="main-content" style="display: none;">
-        <!-- Audio -->
-        <audio id="background-audio" src="./assets/audio/auio.mp3" autoplay loop></audio>
-
        <!-- Navbar -->
         <nav>
             <a href="index.html" class="logo" id="xpresensi-text">JagatCirebon</a>
@@ -593,7 +593,7 @@
          <section id="building" class="section10">
             <div class="content-wrapper-10">
                 <h2>
-                    Macem-macem Acara Taunan lan Bulanan <br class="hidden lg:block" />
+                    Macem-macem Acara Taunan lan Bulanan <br class="br" />
                     <span class="highlight">Kacirebonan</span>
                 </h2>
                 <p>
@@ -842,242 +842,242 @@
         </div>
 
 
-            <!-- Opening Modal -->
-            <div id="opening-modal" class="modal" style="display: none;">
-                <section class="modal-overlay">
-                    <div class="modal-content" id="modal-content">
-                        <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr4.svg" alt="gradient" class="gradient gr3">
-                        <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr.svg" alt="gradient1" class="gradient gr1">
-                        <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr2.svg" alt="gradient2" class="gradient gr2">
-                        <div id="step-0" class="modal-step">
-                            <div class="modal-text">
-                                <h2 class="modal-title">Yuk ngawitan nyusur Cirebon digital</h2>
-                                <p class="modal-description">Miwiti lelungan budaya Cirebon ing jagad digital. Saben warisan budaya pantes dipunjelajahi kanthi apik lan modern.</p>
-                                <div class="modal-divider"></div>
-                                <ul class="modal-list">
-                                    <li>Tentang Kacirebonan</li>
-                                    <li>Musik dan Kesenian Tradisional</li>
-                                    <li>Cerita dan Legenda Cirebon</li>
-                                    <li>Wisata Budaya Virtual</li>
-                                    <li>Tokoh dan Inspirasi Budaya</li>
-                                </ul>
-                            </div>
-                            <div class="modal-nav">
-                                <div class="nav-dots">
-                                    <div class="dot active"></div>
-                                    <div class="dot"></div>
-                                </div>
-                                <button onclick="showStep(1)" class="modal-button">Sakteruse</button>
-                            </div>
+        <!-- Opening Modal -->
+        <div id="opening-modal" class="modal" style="display: none;">
+            <section class="modal-overlay">
+                <div class="modal-content" id="modal-content">
+                    <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr4.svg" alt="gradient" class="gradient gr3">
+                    <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr.svg" alt="gradient1" class="gradient gr1">
+                    <img loading="lazy" draggable="false" oncontextmenu="return false;" src="./assets/gr2.svg" alt="gradient2" class="gradient gr2">
+                    <div id="step-0" class="modal-step">
+                        <div class="modal-text">
+                            <h2 class="modal-title">Yuk ngawitan nyusur Cirebon digital</h2>
+                            <p class="modal-description">Miwiti lelungan budaya Cirebon ing jagad digital. Saben warisan budaya pantes dipunjelajahi kanthi apik lan modern.</p>
+                            <div class="modal-divider"></div>
+                            <ul class="modal-list">
+                                <li>Tentang Kacirebonan</li>
+                                <li>Musik dan Kesenian Tradisional</li>
+                                <li>Cerita dan Legenda Cirebon</li>
+                                <li>Wisata Budaya Virtual</li>
+                                <li>Tokoh dan Inspirasi Budaya</li>
+                            </ul>
                         </div>
-                        <div id="step-1" class="modal-step" style="display: none;">
-                            <div class="modal-image">
-                                <img src="./assets/kraton.jpg" alt="Keraton Cirebon" loading="lazy">
+                        <div class="modal-nav">
+                            <div class="nav-dots">
+                                <div class="dot active"></div>
+                                <div class="dot"></div>
                             </div>
-                            <div class="modal-text2">
-                                <h2 class="modal-title">Pesona Kacirebonan ing Jagad Digital</h2>
-                                <p class="modal-description">Nyusur warisan budaya Cirebon, saka Keraton nganti batik Mega Mendung, kanthi sentuhan digital sing nggawa harmoni tradisi lan modernitas.</p>
-                            </div>
-                            <div class="modal-nav2">
-                                <button onclick="showStep(0)" class="modal-button">Balik</button>
-                                <button onclick="closeOpeningModal()" class="modal-button">Sakteruse Nyusur</button>
-                            </div>
+                            <button onclick="showStep(1)" class="modal-button">Sakteruse</button>
                         </div>
                     </div>
-                </section>
-            </div>
-
-            <!-- Modal Build -->
-            <div id="modal-build" class="modal" style="display: none;">
-                <!-- Placeholder for ModalBuild -->
-                <div class="modal-content">
-                    <p>Modal Build Placeholder</p>
-                    <button onclick="closeModalBuild()">Close</button>
+                    <div id="step-1" class="modal-step" style="display: none;">
+                        <div class="modal-image">
+                            <img src="./assets/kraton.jpg" alt="Keraton Cirebon" loading="lazy">
+                        </div>
+                        <div class="modal-text2">
+                            <h2 class="modal-title">Pesona Kacirebonan ing Jagad Digital</h2>
+                            <p class="modal-description">Nyusur warisan budaya Cirebon, saka Keraton nganti batik Mega Mendung, kanthi sentuhan digital sing nggawa harmoni tradisi lan modernitas.</p>
+                        </div>
+                        <div class="modal-nav2">
+                            <button onclick="showStep(0)" class="modal-button">Balik</button>
+                            <button onclick="closeOpeningModal()" class="modal-button">Sakteruse Nyusur</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </main>
-
-        <div class="modal2" id="modal2">
-            <div class="modal-content2">
-                <span class="close-button2">×</span>
-                <h3 id="modal-title2"></h3>
-                <p id="modal-description2"></p>
-            </div>
+            </section>
         </div>
 
-        <script>
-        // Data for each category
-        const data = {
-            kesenian: {
-                title: "Kesenian Tradisional Cirebon",
-                items: [
-                    "Tari Topeng Cirebon",
-                    "Wayang Kulit Cirebon",
-                    "Seni Tarling",
-                    "Gamelan Cirebon",
-                    "Seni Lukis Kaca",
-                    "Seni Batik",
-                    "Seni Musik Tradisional",
-                    "Seni Teater Tradisional",
-                    "Seni Kaligrafi"
-                ]
-            },
-            keraton: {
-                title: "Keraton di Cirebon",
-                items: [
-                    "Keraton Kasepuhan",
-                    "Keraton Kanoman",
-                    "Keraton Kacirebonan",
-                    "Keraton Keprabon"
-                ]
-            },
-            batik: {
-                title: "Motif Batik Khas Cirebon",
-                items: [
-                    "Motif Mega Mendung",
-                    "Motif Wadasan",
-                    "Motif Paksi Naga Liman",
-                    "Motif Patran Keris",
-                    "Motif Singa Payung",
-                    "Motif Taman Arum",
-                    "Motif Kapal Kandas",
-                    "Motif Naga Seba",
-                    "Motif Burung Hong",
-                    "Motif Kembang Sepatu",
-                    "Motif Teratai",
-                    "Motif Kawung",
-                    "Motif Parang Rusak",
-                    "Motif Sumping",
-                    "Motif Gunung Giwur",
-                    "Motif Sawat",
-                    "Motif Ceplok",
-                    "Motif Truntum"
-                ]
-            },
-            makanan: {
-                title: "Makanan Khas Cirebon",
-                items: [
-                    "Nasi Jamblang",
-                    "Empal Gentong",
-                    "Tahu Gejrot",
-                    "Docang",
-                    "Sate Kalong",
-                    "Mie Koclok",
-                    "Nasi Lengko",
-                    "Bubur Sop Ayam",
-                    "Kerupuk Melarat",
-                    "Sirup Tjampolay"
-                ]
-            }
-        };
+        <!-- Modal Build -->
+        <div id="modal-build" class="modal" style="display: none;">
+            <!-- Placeholder for ModalBuild -->
+            <div class="modal-content">
+                <p>Modal Build Placeholder</p>
+                <button onclick="closeModalBuild()">Close</button>
+            </div>
+        </div>
+    </main>
 
-        // Get modal elements
-        const modalCRB = document.getElementById('infoModal');
-        const modalList = document.getElementById('modalList');
-        const closeButtonCRB = document.querySelector('.close-buttonCRB');
-        const buttonsCRB = document.querySelectorAll('.button8');
-
-        // Add click event to each button
-        buttonsCRB.forEach(button => {
-            button.addEventListener('click', () => {
-                const category = button.getAttribute('data-category');
-                const categoryData = data[category];
-
-                // Set modal content
-                modalList.innerHTML = '';
-                categoryData.items.forEach(item => {
-                    const li = document.createElement('li');
-                    li.textContent = item;
-                    modalList.appendChild(li);
-                });
-
-                // Show modal
-                modalCRB.style.display = 'flex';
-            });
-        });
-
-        // Close modal when close button is clicked
-        closeButtonCRB.addEventListener('click', () => {
-            modalCRB.style.display = 'none';
-        });
-
-        // Close modal when clicking outside the modal content
-        window.addEventListener('click', (event) => {
-            if (event.target === modalCRB) {
-                modalCRB.style.display = 'none';
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && modalCRB.style.display === 'flex') {
-                modalCRB.style.display = 'none';
-            }
-        });
-    </script>
+    <div class="modal2" id="modal2">
+        <div class="modal-content2">
+            <span class="close-button2">×</span>
+            <h3 id="modal-title2"></h3>
+            <p id="modal-description2"></p>
+        </div>
+    </div>
 
     <script>
-        // Initialize Feather Icons
-        feather.replace();
+    // Data for each category
+    const data = {
+        kesenian: {
+            title: "Kesenian Tradisional Cirebon",
+            items: [
+                "Tari Topeng Cirebon",
+                "Wayang Kulit Cirebon",
+                "Seni Tarling",
+                "Gamelan Cirebon",
+                "Seni Lukis Kaca",
+                "Seni Batik",
+                "Seni Musik Tradisional",
+                "Seni Teater Tradisional",
+                "Seni Kaligrafi"
+            ]
+        },
+        keraton: {
+            title: "Keraton di Cirebon",
+            items: [
+                "Keraton Kasepuhan",
+                "Keraton Kanoman",
+                "Keraton Kacirebonan",
+                "Keraton Keprabon"
+            ]
+        },
+        batik: {
+            title: "Motif Batik Khas Cirebon",
+            items: [
+                "Motif Mega Mendung",
+                "Motif Wadasan",
+                "Motif Paksi Naga Liman",
+                "Motif Patran Keris",
+                "Motif Singa Payung",
+                "Motif Taman Arum",
+                "Motif Kapal Kandas",
+                "Motif Naga Seba",
+                "Motif Burung Hong",
+                "Motif Kembang Sepatu",
+                "Motif Teratai",
+                "Motif Kawung",
+                "Motif Parang Rusak",
+                "Motif Sumping",
+                "Motif Gunung Giwur",
+                "Motif Sawat",
+                "Motif Ceplok",
+                "Motif Truntum"
+            ]
+        },
+        makanan: {
+            title: "Makanan Khas Cirebon",
+            items: [
+                "Nasi Jamblang",
+                "Empal Gentong",
+                "Tahu Gejrot",
+                "Docang",
+                "Sate Kalong",
+                "Mie Koclok",
+                "Nasi Lengko",
+                "Bubur Sop Ayam",
+                "Kerupuk Melarat",
+                "Sirup Tjampolay"
+            ]
+        }
+    };
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const videoButtons = document.querySelectorAll('.button-container9');
-            const modal = document.getElementById('videoModal');
-            const videoIframe = document.getElementById('videoIframe');
-            const closeModal = document.querySelector('.modal-close9');
+    // Get modal elements
+    const modalCRB = document.getElementById('infoModal');
+    const modalList = document.getElementById('modalList');
+    const closeButtonCRB = document.querySelector('.close-buttonCRB');
+    const buttonsCRB = document.querySelectorAll('.button8');
 
-            // Open modal with video
-            videoButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const card = this.closest('.card');
-                    const videoUrl = card.getAttribute('data-video');
-                    if (videoUrl) {
-                        videoIframe.setAttribute('src', videoUrl);
-                        modal.classList.add('active');
-                        document.body.classList.add('modal-open');
-                    }
-                });
+    // Add click event to each button
+    buttonsCRB.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+            const categoryData = data[category];
+
+            // Set modal content
+            modalList.innerHTML = '';
+            categoryData.items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                modalList.appendChild(li);
             });
 
-            // Close modal
-            closeModal.addEventListener('click', function () {
+            // Show modal
+            modalCRB.style.display = 'flex';
+        });
+    });
+
+    // Close modal when close button is clicked
+    closeButtonCRB.addEventListener('click', () => {
+        modalCRB.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === modalCRB) {
+            modalCRB.style.display = 'none';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modalCRB.style.display === 'flex') {
+            modalCRB.style.display = 'none';
+        }
+    });
+</script>
+
+<script>
+    // Initialize Feather Icons
+    feather.replace();
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const videoButtons = document.querySelectorAll('.button-container9');
+        const modal = document.getElementById('videoModal');
+        const videoIframe = document.getElementById('videoIframe');
+        const closeModal = document.querySelector('.modal-close9');
+
+        // Open modal with video
+        videoButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const card = this.closest('.card');
+                const videoUrl = card.getAttribute('data-video');
+                if (videoUrl) {
+                    videoIframe.setAttribute('src', videoUrl);
+                    modal.classList.add('active');
+                    document.body.classList.add('modal-open');
+                }
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', function () {
+            modal.classList.remove('active');
+            videoIframe.setAttribute('src', ''); // Stop video
+            document.body.classList.remove('modal-open');
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
                 modal.classList.remove('active');
                 videoIframe.setAttribute('src', ''); // Stop video
                 document.body.classList.remove('modal-open');
-            });
+            }
+        });
 
-            // Close modal when clicking outside
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    modal.classList.remove('active');
-                    videoIframe.setAttribute('src', ''); // Stop video
-                    document.body.classList.remove('modal-open');
+        // Highlight current page in navbar
+        const navLinks = document.querySelectorAll('.navbar-menu a');
+        function setCurrentLink() {
+            const currentHash = window.location.hash || '';
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            navLinks.forEach(link => {
+                link.classList.remove('current');
+                const href = link.getAttribute('href');
+                if ((href.includes('#cerita') && currentHash === '#cerita') || href === currentPath) {
+                    link.classList.add('current');
                 }
             });
-
-            // Highlight current page in navbar
-            const navLinks = document.querySelectorAll('.navbar-menu a');
-            function setCurrentLink() {
-                const currentHash = window.location.hash || '';
-                const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-                navLinks.forEach(link => {
-                    link.classList.remove('current');
-                    const href = link.getAttribute('href');
-                    if ((href.includes('#cerita') && currentHash === '#cerita') || href === currentPath) {
-                        link.classList.add('current');
-                    }
-                });
-            }
-            navLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    navLinks.forEach(l => l.classList.remove('current'));
-                    this.classList.add('current');
-                });
+        }
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('current'));
+                this.classList.add('current');
             });
-            setCurrentLink();
-            window.addEventListener('hashchange', setCurrentLink);
         });
-    </script>
+        setCurrentLink();
+        window.addEventListener('hashchange', setCurrentLink);
+    });
+</script>
 
    <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -1412,15 +1412,43 @@
     </script>
     <script>
         function showStep(step) {
-            document.getElementById('step-0').style.display = step === 0 ? 'block' : 'none';
-            document.getElementById('step-1').style.display = step === 1 ? 'block' : 'none';
-            const dots = document.querySelectorAll('.nav-dots .dot');
-            dots.forEach((dot, i) => dot.classList.toggle('active', i === step));
-        }
+    document.getElementById('step-0').style.display = step === 0 ? 'block' : 'none';
+    document.getElementById('step-1').style.display = step === 1 ? 'block' : 'none';
+    const dots = document.querySelectorAll('.nav-dots .dot');
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === step));
+}
 
-        function closeOpeningModal() {
-            document.getElementById('opening-modal').style.display = 'none';
-        }
+function closeOpeningModal() {
+    document.getElementById('opening-modal').style.display = 'none';
+    localStorage.setItem('play', 'true');
+    playAudio();
+}
+
+function playAudio() {
+    const audio = document.getElementById('background-audio');
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.error('Audio playback failed:', error);
+            // Fallback: Wait for user interaction to play audio
+            document.addEventListener('click', function tryPlayAudio() {
+                audio.play().catch(err => console.error('Retry audio playback failed:', err));
+                document.removeEventListener('click', tryPlayAudio);
+            }, { once: true });
+        });
+    }
+}
+
+// Check localStorage on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('opening-modal');
+    if (localStorage.getItem('play') === 'true') {
+        modal.style.display = 'none'; // Skip modal if play is true
+        playAudio(); // Attempt to play audio
+    } else {
+        modal.style.display = 'block'; // Show modal on first visit
+    }
+});
     </script>
     <script>
         function scrollToTop() {

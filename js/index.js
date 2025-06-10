@@ -11,10 +11,8 @@ function closeSidebarMenu() {
     sidebar.style.left = '-100%';
 }
 
-// Add click event to close button
+// Add click event to close button and menu items
 closeSidebar.addEventListener('click', closeSidebarMenu);
-
-// Add click event to each menu item
 menuItems.forEach(item => {
     item.addEventListener('click', closeSidebarMenu);
 });
@@ -23,18 +21,37 @@ hamburger.addEventListener('click', () => {
     sidebar.style.left = '0';
 });
 
-closeSidebar.addEventListener('click', () => {
-    sidebar.style.left = '-100%';
-});
-
 function scrollToSection(id) {
     location.hash = '#' + id;
     sidebar.style.left = '-100%';
 }
 
-// Inisialisasi feather icon jika digunakan
+// Initialize feather icons if available
 if (typeof feather !== 'undefined') {
     feather.replace();
+}
+
+// Function to attempt audio playback with fallback
+function playAudio(audio) {
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.error('Audio playback failed:', error);
+            // Fallback: Play on first user interaction (scroll, click, touch, or keypress)
+            const tryPlayAudio = () => {
+                audio.play().catch(err => console.error('Retry audio playback failed:', err));
+                // Remove all listeners after first attempt
+                document.removeEventListener('scroll', tryPlayAudio);
+                document.removeEventListener('click', tryPlayAudio);
+                document.removeEventListener('touchstart', tryPlayAudio);
+                document.removeEventListener('keydown', tryPlayAudio);
+            };
+            document.addEventListener('scroll', tryPlayAudio, { once: true });
+            document.addEventListener('click', tryPlayAudio, { once: true });
+            document.addEventListener('touchstart', tryPlayAudio, { once: true });
+            document.addEventListener('keydown', tryPlayAudio, { once: true });
+        });
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -51,9 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (audio) {
         audio.volume = 0.75;
         audio.muted = false;
-        audio.play().catch((error) => {
-            console.error("Error playing audio:", error);
-        });
     }
 
     // Loading progress
@@ -69,7 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 loadingBar.style.display = "none";
                 mainContent.style.display = "block";
-                if (!sessionStorage.getItem("sessionOpen")) {
+                // Check localStorage for modal and audio
+                if (localStorage.getItem("play") === "true") {
+                    openingModal.style.display = "none";
+                    if (audio) playAudio(audio);
+                } else {
                     openingModal.style.display = "flex";
                 }
             }, 1000);
@@ -80,12 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Modal handling
     window.closeOpeningModal = function () {
-        sessionStorage.setItem("sessionOpen", "true");
+        localStorage.setItem("play", "true");
         openingModal.style.display = "none";
         if (audio) {
-            audio.play().catch((error) => {
-                console.error("Error playing audio:", error);
-            });
+            playAudio(audio); // User interaction allows playback
         }
     };
 
@@ -98,23 +114,17 @@ document.addEventListener("DOMContentLoaded", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    // Cleanup
-    window.addEventListener("unload", () => {
-        sessionStorage.removeItem("sessionOpen");
-    });
+    // Cleanup (optional, commented out to persist localStorage)
+    // window.addEventListener("unload", () => {
+    //     localStorage.removeItem("play");
+    // });
 
     setTimeout(() => {
-        if (!sessionStorage.getItem("sessionOpen")) {
+        if (localStorage.getItem("play") !== "true") {
             openingModal.style.display = "flex";
         }
         clearInterval(interval);
     }, 1000);
-});
-
- // Initialize AOS for animations
-AOS.init({
-    duration: 800,
-    once: true
 });
 
 // Prevent context menu on image
