@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
     <title>JagatCirebon - Wisata</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Strait&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/index.css">
-    <script src="./js/feather.js"></script>
     <style>
         .packet-section {
             position: relative;
@@ -240,6 +240,11 @@
                 padding: 3.5rem 1.2rem;
             }
         }
+
+        .icon-map {
+            width: 16px;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -291,34 +296,34 @@
             <div class="service-column">
                 <h3>Wisata Alam</h3>
                 <ul>
-                    <li><i data-feather="check-square"></i> Pantai Kejawanan</li>
-                    <li><i data-feather="check-square"></i> Bukit Gronggong</li>
-                    <li><i data-feather="check-square"></i> Telaga Biru</li>
-                    <li><i data-feather="check-square"></i> Situ Sedong</li>
-                    <li><i data-feather="check-square"></i> Taman Krucuk</li>
-                    <li><i data-feather="check-square"></i> Hutan Kera Plangon</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Pantai Kejawanan</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Bukit Gronggong</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Telaga Biru</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Situ Sedong</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Taman Krucuk</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Hutan Kera Plangon</li>
                 </ul>
             </div>
             <div class="service-column">
                 <h3>Wisata Budaya</h3>
                 <ul>
-                    <li><i data-feather="check-square"></i> Keraton Kasepuhan</li>
-                    <li><i data-feather="check-square"></i> Keraton Kanoman</li>
-                    <li><i data-feather="check-square"></i> Masjid Sang Cipta Rasa</li>
-                    <li><i data-feather="check-square"></i> Kampung Batik Trusmi</li>
-                    <li><i data-feather="check-square"></i> Makam Sunan Gunung Jati</li>
-                    <li><i data-feather="check-square"></i> Taman Sari Gua Sunyaragi</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Keraton Kasepuhan</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Keraton Kanoman</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Masjid Sang Cipta Rasa</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Kampung Batik Trusmi</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Makam Sunan Gunung Jati</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Taman Sari Gua Sunyaragi</li>
                 </ul>
             </div>
             <div class="service-column">
                 <h3>Wisata Kuliner</h3>
                 <ul>
-                    <li><i data-feather="check-square"></i> Nasi Jamblang Mang Dul</li>
-                    <li><i data-feather="check-square"></i> Empal Gentong H. Apud</li>
-                    <li><i data-feather="check-square"></i> Tahu Gejrot Pak Umar</li>
-                    <li><i data-feather="check-square"></i> Docang Pak Kumis</li>
-                    <li><i data-feather="check-square"></i> Sate Kalong</li>
-                    <li><i data-feather="check-square"></i> Mie Koclok</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Nasi Jamblang Mang Dul</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Empal Gentong H. Apud</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Tahu Gejrot Pak Umar</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Docang Pak Kumis</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Sate Kalong</li>
+                    <li><img src="./assets/icon/loc.svg" alt="icon-map" class="icon-map"> Mie Koclok</li>
                 </ul>
             </div>
         </div>
@@ -379,8 +384,6 @@
                 });
             }
             window.scrollTo(0, 0);
-            // Initialize Feather Icons
-            feather.replace();
         });
 
         function scrollToTop() {
