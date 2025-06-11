@@ -2202,13 +2202,6 @@ a {
     }
 
     @media screen and (max-width: 650px) {
-        .header-container {
-            width: 95vw;
-            margin: 0 auto;
-            border-left: 0 solid #000;
-            height: 300px;
-        }
-
         .user-images {
             margin-left: auto;
             align-items: start;
@@ -2595,13 +2588,6 @@ a {
             border-bottom: 1px solid black;
             border-right: 0 solid black;
         }
-        
-        .item {
-            text-align: left;
-            justify-content: start;
-            padding: 20px 18px;
-            align-items: start;
-        }
     }
 
     .item h2 {
@@ -2980,41 +2966,6 @@ a {
       height: 340px;
       border: 1px solid black;
       overflow: hidden;
-  }
-
-  @media screen and (max-width: 650px) {
-    .content-wrapper-10 h2 {
-        user-select: none;
-        font-weight: normal;
-        font-size: 24px;
-        margin-left: 16px;
-        text-align: left;
-        margin-bottom: 16px;
-    }
-
-    .content-wrapper-10 h2 .highlight {
-        color: #f97316; /* Tailwind's orange-500 */
-    }
-
-    .content-wrapper-10 p {
-        user-select: none;
-        font-size: 15px;
-        text-align: left;
-        color: black;
-        margin: 16px auto 24px;
-        line-height: 1.75;
-        width: 90%;
-    }
-
-    .carousel-container {
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
-        height: 340px;
-        border: 1px solid black;
-        overflow: hidden;
-    }
-
   }
 
   .carousel-images img {
@@ -3691,12 +3642,6 @@ a {
   }
 
   @media screen and (max-width: 650px) {
-    .main-text-header {
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
-        justify-content: space-between;
-    }
       .main-text-header p:first-child {
         font-weight: 600;
         font-size: 24px;
@@ -4478,7 +4423,7 @@ cursor: pointer;
     .hero-description {
         font-size: 16px;
         margin-top: 20px;
-        padding-left: 0px;
+        padding-left: 2px;
     }
 
     .hero-title {
@@ -4492,12 +4437,14 @@ cursor: pointer;
     }
 
     .hero-button {
-        width: 100%;
+        width: 98.6%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-content {
         padding-bottom: 0px;
-        padding-left: 20px;
+        padding-left: 14px;
         padding-right: 20px;
     }
 
@@ -4573,7 +4520,7 @@ cursor: pointer;
 
     .list-wrapper { 
         margin: 0;
-        padding: 0 20px;
+        padding: 0 16px;
         width: 100%;
     }
 
@@ -4618,7 +4565,7 @@ cursor: pointer;
         border: 0;
         min-height: 0%;
         height: max-content;
-        padding: 2rem 1.5rem 2rem;
+        padding: 2rem 1rem 2rem;
     }
 
     .content-wrapper-14 .p2 {
@@ -4669,6 +4616,21 @@ cursor: pointer;
         color: black;
         font-size: 16px;
         background: white;
+    }
+
+    .content6 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .description6 {
+        padding: 0;
+    }
+
+    .bottom-section5 {
+        position: relative;
+        width: 100%;
+        padding: 2rem 1.2rem;
     }
 
     .culture-button { 
@@ -4839,6 +4801,73 @@ cursor: pointer;
 
     .hero-title {
         width: 88%;
+    }
+
+    .header-container {
+        width: 100vw;
+        margin: 0 auto;
+        border-left: 0 solid #000;
+        height: 300px;
+    }
+    
+    .carousel-container {
+        position: relative;
+        width: 92%;
+        margin: 0 auto;
+        height: 340px;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+
+    .content-wrapper-10 h2 {
+        user-select: none;
+        font-weight: normal;
+        font-size: 24px;
+        margin-left: 15px;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    .content-wrapper-10 h2 .highlight {
+        color: #f97316; 
+    }
+
+    .content-wrapper-10 p {
+        user-select: none;
+        font-size: 15px;
+        text-align: left;
+        color: black;
+        margin: 16px auto 24px;
+        line-height: 1.75;
+        width: 92.5%;
+    }
+        
+    .section13 {
+        user-select: none;
+        position: relative;
+        border-right: 1px solid black;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 24px;
+    }
+
+    .main-text-header {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 0px;
+        justify-content: space-between;
+    }
+
+    .section13 .main-text p { 
+        margin-left: 0px;
+    }
+
+    .item {
+        text-align: left;
+        justify-content: start;
+        padding: 20px 16px;
+        align-items: start;
     }
 
 }
