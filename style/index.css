@@ -4935,3 +4935,12 @@ cursor: pointer;
 .section13 img, .section7 img, .section5 img {
     filter: grayscale(100%);
 }
+
+a {
+    color: black;
+}
+
+footer a:hover {
+    border-bottom: 1px solid black;
+    color: rgb(44, 44, 44);
+}
