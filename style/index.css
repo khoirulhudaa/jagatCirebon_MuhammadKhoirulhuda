@@ -4666,8 +4666,9 @@ cursor: pointer;
         border: 1px solid #000;
         padding: 12px;
         width: max-content;
+        color: black;
         font-size: 16px;
-        background: #ffe2a4;
+        background: white;
     }
 
     .culture-button { 
