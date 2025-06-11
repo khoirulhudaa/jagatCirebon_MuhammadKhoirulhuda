@@ -179,8 +179,8 @@ small {
 .gr2 {
     position: fixed;
     width: 150%;
-    height: 150%;
-    top: -20%;
+    height: 100vh;
+    top: 0%;
     right: -20%;
     animation: gr2 4s ease-in infinite;
 }
@@ -1368,7 +1368,7 @@ a {
     .culture-section {
         flex-direction: row;
         padding: 0 64px;
-        min-height: 84vh;
+        height: 84vh;
     }
 }
 
@@ -1376,6 +1376,8 @@ a {
     .culture-image {
         display: block;
         width: 40%;
+        height: 96%;
+        overflow: hidden;
         padding: 20px;
         border-left: 1px solid #000;
         border-right: 1px solid #000;
@@ -1384,7 +1386,7 @@ a {
 
 .culture-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     filter: grayscale(100%);
 }
 
@@ -4430,8 +4432,8 @@ cursor: pointer;
     }
 
     .hero-button {
-        width: 98.6%;
-        margin-left: auto;
+        width: 100%;
+        margin-left: 2px;
         margin-right: auto;
     }
 
@@ -4510,6 +4512,7 @@ cursor: pointer;
 
     .section6 {
         border-top: 0;
+        padding-bottom: 30px;
     }
 
     .list-wrapper { 
@@ -4520,6 +4523,7 @@ cursor: pointer;
 
     .arts-section {
         padding-top: 0px;
+        margin-bottom: 30px;
     }
 
     .arts-items {
@@ -4909,6 +4913,22 @@ cursor: pointer;
 
     .p5 {
         top: 2.5px;
+    }
+
+    .culture-content {
+        padding-bottom: 2px;
+    }
+
+    .culture-section {
+        padding-top: 16px;
+    }
+
+    .arts-title {
+        margin-top: 0px;
+    }
+
+    .arts-content { 
+        margin-top: 30px;
     }
 }
 
