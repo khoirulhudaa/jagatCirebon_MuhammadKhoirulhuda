@@ -3906,13 +3906,6 @@ a {
         flex-direction: column;
         width: 100%;
     }
-    .footer-links {
-        width: 100%;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
      .footer-column {
         width: 100%;
      }
@@ -4478,6 +4471,7 @@ cursor: pointer;
 
     .section11 {
         margin-top: 30px;
+        padding: 8px 18px 40px;
     }
 
     .span {
@@ -4582,6 +4576,7 @@ cursor: pointer;
 
     .section12 {
         margin-bottom: 46px;
+        padding: 0 18px;
     }
 
     .content-wrapper-13 h1 {
@@ -4600,7 +4595,7 @@ cursor: pointer;
 
     .footer-logo {
         width: 100%;
-        padding: 32px 24px 16px 24px;
+        padding: 32px 18px 16px 18px;
         border-right: 1px solid black;
         display: flex;
         align-items: start;
@@ -4656,6 +4651,7 @@ cursor: pointer;
         background-color: #ffffff;
         color: #000000;
         width: 100%;
+        align-items: center;
         margin-left: 0px;
         margin-top: 10px;
         border: 1px solid white;
@@ -4848,7 +4844,7 @@ cursor: pointer;
         border-right: 1px solid black;
         width: 100%;
         overflow: hidden;
-        padding: 0 24px;
+        padding: 0 18px;
     }
 
     .main-text-header {
@@ -4870,6 +4866,45 @@ cursor: pointer;
         align-items: start;
     }
 
+    .content-wrapper9 {
+        width: 100%;
+        padding: 40px 12px;
+    }
+
+    .section10 {
+        position: relative;
+        padding: 0 0px;
+        width: 100vw;
+        z-index: 11;
+    }
+
+    .section14 {
+        user-select: none;
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
+        min-height: 70vh;
+        padding: 0 18px;
+    }
+
+     .footer-links {
+        width: 100%;
+        padding: 24px 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .section8 {
+        user-select: none;
+        position: relative;
+        width: 100vw;
+        padding: 0 0px;
+    }
+
+    .p5 {
+        top: 2.5px;
+    }
 }
 
 .section13 img, .section7 img, .section5 img {
