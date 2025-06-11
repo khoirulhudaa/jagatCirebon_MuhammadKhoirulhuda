@@ -4595,7 +4595,7 @@ cursor: pointer;
 
     .footer-logo {
         width: 100%;
-        padding: 32px 18px 16px 18px;
+        padding: 32px 16px 16px 16px;
         border-right: 1px solid black;
         display: flex;
         align-items: start;
@@ -4620,6 +4620,10 @@ cursor: pointer;
 
     .description6 {
         padding: 0;
+    }
+
+    .section6 .description6 {
+        margin-left: 0px;
     }
 
     .bottom-section5 {
@@ -4711,7 +4715,7 @@ cursor: pointer;
 
     .modal-content {
         width: 90vw;
-        height: 90vh;
+        height: max-content;
     }
 
     .section9 .card {
@@ -4730,6 +4734,7 @@ cursor: pointer;
 
     .section7 .bottom-heading {
         font-size: 30px;
+        margin-left: -2px;
     }
 
     .section7 .bottom-description {
@@ -4889,7 +4894,7 @@ cursor: pointer;
 
      .footer-links {
         width: 100%;
-        padding: 24px 18px;
+        padding: 24px 16px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
