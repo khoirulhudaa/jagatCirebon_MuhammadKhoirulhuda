@@ -36,7 +36,6 @@ function playAudio(audio) {
     const playPromise = audio.play();
     if (playPromise !== undefined) {
         playPromise.catch(error => {
-            console.error('Audio playback failed:', error);
             // Fallback: Play on first user interaction (scroll, click, touch, or keypress)
             const tryPlayAudio = () => {
                 audio.play().catch(err => console.error('Retry audio playback failed:', err));
