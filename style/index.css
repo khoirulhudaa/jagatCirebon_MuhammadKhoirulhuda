@@ -1213,6 +1213,10 @@ a {
         width: 80vw;
         margin: 10px 0 0 14px;
     }
+
+    .br1 {
+        display: none;
+    }
 }
 
 .hero-description {
@@ -4668,6 +4672,8 @@ cursor: pointer;
 
     .culture-button { 
         width: 100%;
+        align-items: center;
+        gap: 5.5px;
     }
 
     .button5 {
@@ -4729,6 +4735,8 @@ cursor: pointer;
 
     .arts-button {
         width: 100%;
+        align-items: center;
+        gap: 6px;
     }
 
     .modal-content9 {
@@ -4774,8 +4782,14 @@ cursor: pointer;
 
     .hero-button {
         text-align: left;
-        align-items: start;
+        align-items: center;
+        gap: 6px;
         justify-content: start;
+    }
+
+    .arrow-icon {
+        position: relative;
+        top: 0;
     }
 
     .gallery-button {
@@ -4795,6 +4809,8 @@ cursor: pointer;
 
      .button8 {
         width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .content-right h2 {
@@ -4819,6 +4835,11 @@ cursor: pointer;
         margin-left: -4px;
         font-weight: normal;
     }
+
+    .hero-title {
+        width: 88%;
+    }
+
 }
 
 .section13 img, .section7 img, .section5 img {
