@@ -5230,7 +5230,7 @@ footer a:hover {
 
     .new-left {
         width: 100%;
-        padding-top: 40px;
+        padding-top: 30px;
         padding-bottom: 8px;
     }
 
@@ -5242,12 +5242,26 @@ footer a:hover {
         line-height: 1.8em;
     }
 
-    .new-section h4 {
-        margin-bottom: 12px;
-        font-weight: normal;
-        margin-left: 1px;
+    .new-left .h2-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 24px;
+        border-top: 0 solid black;
+        border-bottom: 0 solid black;
     }
 
+    .new-section h4 {
+        font-weight: normal;
+        /* border: 1px solid black; */
+        width: max-content;
+        padding: 10px 20px 10px 0px;
+        height: 100%;
+        height: 100%;
+        margin-left: 0px;
+        border-right: 0;
+    }
     .new-section h2 {
         font-size: 24px;
         width: 94%;
