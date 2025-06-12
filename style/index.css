@@ -4816,7 +4816,7 @@ cursor: pointer;
     }
 
     .header-container {
-        width: 100vw;
+        width: 98vw;
         margin: 0 auto;
         border-left: 0 solid #000;
         height: 286px;
@@ -5231,7 +5231,7 @@ footer a:hover {
     .new-left {
         width: 100%;
         padding-top: 30px;
-        padding-bottom: 8px;
+        padding-bottom: 0px;
     }
 
     .new-section p {
@@ -5239,17 +5239,12 @@ footer a:hover {
         text-align: justify;
         margin-top: 20px;
         margin-left: 0px;
+        margin-bottom: 30px;
         line-height: 1.8em;
     }
 
     .new-left .h2-left {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 24px;
-        border-top: 0 solid black;
-        border-bottom: 0 solid black;
+       display: none;
     }
 
     .new-section h4 {
@@ -5344,6 +5339,10 @@ footer a:hover {
         display: flex;
         justify-content: start;
         margin: 20px 0;
+    }
+
+    .controls2 {
+        display: none;
     }
 
     .control-btn {
