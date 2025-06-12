@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>JagatCirebon - Kontak</title>
-  <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" crossorigin />
-  <style>
-     * {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>JagatCirebon - Kontak</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -120,7 +120,7 @@
 
         .tokoh-section {
             border-bottom: 1px solid #000;
-            padding: 6rem 62px 3rem 62px;
+            padding: 6rem 62px;
             min-height: 100vh;
             margin-top: 0rem;
             width: 100vw;
@@ -188,6 +188,7 @@
 
         .footer {
             background: #fff;
+            border-top: 1px solid #000;
             padding: 2rem 1rem;
         }
 
@@ -291,6 +292,7 @@
           @media screen and (max-width: 650px) {
             .tokoh-section {
                 padding: 5rem 20px 2rem 20px;
+                width: 100%;
             }
 
             .tokoh-info h2 {
@@ -299,7 +301,7 @@
 
             .footer {
                 background: #fff;
-                border-top: 1px solid #000;
+                border-top: 0;
                 padding: 1rem 1rem;
                 font-size: 16px;
                 flex-direction: column;
@@ -333,75 +335,89 @@
                 width: 90%;
             }
         }
-  </style>
+    </style>
 </head>
 <body>
-  <audio id="background-audio" src="./assets/audio/audio.mp3" autoplay loop></audio>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a href="index.html" class="navbar-logo" id="xpresensi-text">JagaCirebon</a>
-      <ul class="navbar-menu">
-        <li><a href="index.html">Laman utama</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </div>
-  </nav>
+    <audio id="background-audio" src="./assets/audio/audio.mp3" autoplay loop></audio>
 
-  <!-- Gradient Images -->
-  <img src="./assets/gr.svg" alt="gradient1" class="gr1" draggable="false" oncontextmenu="return false;">
-  <img src="./assets/gr2.svg" alt="gradient" class="gr3" draggable="false" oncontextmenu="return false;">
-  <img src="./assets/gr2.svg" alt="gradient2" class="gr2" draggable="false" oncontextmenu="return false;">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo" id="xpresensi-text">JagaCirebon</a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Laman utama</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Main Section -->
-  <section class="tokoh-section">
-    <div class="tokoh-info">
-      <div class="breadcrumb">
-        <a href="index.html" class="breadcrumb-link">Laman utama</a>
-        <span class="breadcrumb-separator">/</span>
-        <span>Kontak</span>
-      </div>
-      <h2>Kontak pengembang web</h2>
-      <p>Whatsapp: +6289513093406</p>
-      <p>Email: muhammadkhoirulhuda111@gmail.com</p>
-      <div id="map" class="map-container"></div>
-    </div>
-  </section>
+    <!-- Gradient Images -->
+    <img src="./assets/gr.svg" alt="gradient1" class="gr1" draggable="false" oncontextmenu="return false;">
+    <img src="./assets/gr2.svg" alt="gradient" class="gr3" draggable="false" oncontextmenu="return false;">
+    <img src="./assets/gr2.svg" alt="gradient2" class="gr2" draggable="false" oncontextmenu="return false;">
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <p>© 2025 JagaCirebon. Hak cipta dilindungi.</p>
-      <ul class="footer-links">
-        <li><a href="index.html">Laman utama</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </div>
-  </footer>
+    <!-- Main Section -->
+    <section class="tokoh-section">
+        <div class="tokoh-info">
+            <div class="breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Laman utama</a>
+                <span class="breadcrumb-separator">/</span>
+                <span>Kontak</span>
+            </div>
+            <h2>Kontak pengembang web</h2>
+            <p>Whatsapp: +6289513093406</p>
+            <p>Email: muhammadkhoirulhuda111@gmail.com</p>
+            <div id="map" class="map-container"></div>
+        </div>
+    </section>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const map = L.map('map').setView([-6.7071, 108.5557], 13);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-      }).addTo(map);
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2025 JagaCirebon. Hak cipta dilindungi.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Laman utama</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </footer>
 
-      L.marker([-6.7200, 108.5333])
-        .addTo(map)
-        .bindPopup('Cirebon')
-        .openPopup();
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Leaflet map
+            const map = L.map('map').setView([-6.7071, 108.5557], 13); // Centered on Cirebon
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            L.marker([-6.7200, 108.5333]).addTo(map)
+                .bindPopup('Cirebon')
+                .openPopup();
 
-      const navLinks = document.querySelectorAll('.navbar-menu a');
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      navLinks.forEach(link => {
-        link.classList.toggle('current', link.getAttribute('href') === currentPage);
-      });
-    });
-  </script>
+            // Highlight current page in navbar
+            const navLinks = document.querySelectorAll('.navbar-menu a');
+            function setCurrentLink() {
+                const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+                navLinks.forEach(link => {
+                    link.classList.remove('current');
+                    const href = link.getAttribute('href');
+                    if (href === currentPath) {
+                        link.classList.add('current');
+                    }
+                });
+            }
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.forEach(l => l.classList.remove('current'));
+                    this.classList.add('current');
+                });
+            });
+            setCurrentLink();
+        });
+    </script>
 </body>
 </html>
