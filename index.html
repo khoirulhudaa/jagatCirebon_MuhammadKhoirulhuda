@@ -581,6 +581,34 @@
         </div>
         </section>
 
+        <section class="new-section">
+            <div class="new-left">
+                <h4>Rungokna cara ngomong wong Cirebon</h4>
+                <h2>Ningal basa Cerbon</h2>
+                <p>Bahasa Cirebon, atau sering disebut Basa Cerbon dalam bahasa lokal, adalah dialek khas yang digunakan di wilayah Cirebon, Jawa Barat, dan sekitarnya, termasuk sebagian Indramayu, Kuningan, dan Majalengka. Bahasa ini merupakan bagian dari rumpun bahasa Jawa, tetapi memiliki karakteristik unik karena pengaruh budaya Sunda, Arab, Tionghoa, dan Belanda.</p>
+                <div class="controls2">
+                    <button class="control-btn2 play-btn" id="playPause"><span class="span-play">▶</span> Putar audio</button>
+                </div>
+            </div>
+            <div class="music-player">
+                <div class="album-art">
+                    <!-- <img src="./assets/crb1.jpg" alt="album-cover"> -->
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="time">
+                        <span class="current-time">0:00</span>
+                        <span class="duration">3:30</span>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="control-btn play-btn" id="playPause2">▶</button>
+                </div>
+            </div>
+        </section>
+
         <!-- Modal -->
         <div class="modal9" id="videoModal">
             <div class="modal-content9">
@@ -589,8 +617,7 @@
             </div>
         </div>
 
-      
-         <section id="building" class="section10">
+        <section id="building" class="section10">
             <div class="content-wrapper-10">
                 <h2>
                     Macem-macem Acara Taunan lan Bulanan <br class="br" />
@@ -625,7 +652,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="kuliner" class="section11">
             <div class="vertical-line-left"></div>
             <div class="vertical-line-right"></div>
@@ -905,7 +932,97 @@
         </div>
     </div>
 
-    <script>
+<script>
+    const audio = new Audio('./assets/audio/crb.mp4');
+    const playPauseBtn = document.getElementById('playPause');
+    const playPauseBtn2 = document.getElementById('playPause2');
+    const progressBar = document.querySelector('.progress');
+    const volumeBar = document.querySelector('.volume');
+    const currentTimeEl = document.querySelector('.current-time');
+    const durationEl = document.querySelector('.duration');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let isPlaying = false;
+
+    // Play/Pause functionality
+    playPauseBtn.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            playPauseBtn.innerHTML = '▶ Mulai suara';
+        } else {
+            audio.play();
+            playPauseBtn.innerHTML = '❚❚ Hnentikan suara';
+        }
+        isPlaying = !isPlaying;
+    });
+    
+    // Play/Pause functionality
+    playPauseBtn2.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            playPauseBtn2.innerHTML = '▶ Mulai suara';
+        } else {
+            audio.play();
+            playPauseBtn2.innerHTML = '❚❚ hentikan suara';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    // Update progress bar
+    audio.addEventListener('timeupdate', () => {
+        const { currentTime, duration } = audio;
+        const progressPercent = (currentTime / duration) * 100;
+        progressBar.style.width = `${progressPercent}%`;
+
+        // Update time display
+        currentTimeEl.textContent = formatTime(currentTime);
+        durationEl.textContent = formatTime(duration);
+    });
+
+    // Progress bar click
+    document.querySelector('.progress-bar').addEventListener('click', (e) => {
+        const width = e.target.clientWidth;
+        const clickX = e.offsetX;
+        const duration = audio.duration;
+        audio.currentTime = (clickX / width) * duration;
+    });
+
+    // Volume control
+    document.querySelector('.volume-bar').addEventListener('click', (e) => {
+        const width = e.target.clientWidth;
+        const clickX = e.offsetX;
+        const volume = clickX / width;
+        audio.volume = volume;
+        volumeBar.style.width = `${volume * 100}%`;
+    });
+
+    // Previous/Next track (placeholder functionality)
+    prevBtn.addEventListener('click', () => {
+        alert('Previous track functionality not implemented.');
+    });
+
+    nextBtn.addEventListener('click', () => {
+        alert('Next track functionality not implemented.');
+    });
+
+    // Format time in mm:ss
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        seconds = Math.floor(seconds % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+
+    // Set initial volume
+    audio.volume = 1;
+    volumeBar.style.width = '100%';
+
+    // Set duration when metadata is loaded
+    audio.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(audio.duration);
+    });
+</script>
+
+<script>
     // Data for each category
     const data = {
         kesenian: {
