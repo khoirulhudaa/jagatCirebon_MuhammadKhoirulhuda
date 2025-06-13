@@ -324,8 +324,6 @@
     </style>
 </head>
 <body>
-    <audio id="background-audio" src="./assets/audio/audio.mp3" loop></audio> <!-- Autoplay dihapus -->
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-container">
@@ -388,7 +386,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const navLinks = document.querySelectorAll('.navbar-menu a');
-            const audio = document.getElementById('background-audio');
 
             // Set current navigation link
             function setCurrentLink() {
@@ -410,12 +407,6 @@
             });
 
             setCurrentLink();
-
-            // Play audio after user interaction to comply with browser policies
-            document.body.addEventListener('click', function playAudio() {
-                audio.play().catch(err => console.log('Audio playback failed:', err));
-                document.body.removeEventListener('click', playAudio); // Remove listener after first play
-            }, { once: true });
         });
     </script>
 </body>

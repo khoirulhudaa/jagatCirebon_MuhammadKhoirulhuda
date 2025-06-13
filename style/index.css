@@ -5256,12 +5256,17 @@ footer a:hover {
         margin-left: 0px;
         border-right: 0;
     }
+
     .new-section h2 {
         font-size: 24px;
         width: 94%;
-        margin-left: 0px;
+        margin-left: -1.3px;
         font-weight: normal;
         line-height: 1.4em;
+    }
+
+    .section9 h2 {
+        margin-left: -0.5px;
     }
 
     .music-player {
