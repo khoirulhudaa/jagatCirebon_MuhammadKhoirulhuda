@@ -1302,7 +1302,7 @@ a {
 }
 
 .icon {
-    margin: 0 10px 0 0;
+    margin: 0 10px 0 10px;
 }
 
 .sponsor-section {
@@ -1564,6 +1564,7 @@ a {
 .arts-item-description {
     font-size: 15px;
     margin: 0px 0 28px;
+    line-height: 1.4em;
 }
 
 
@@ -1952,12 +1953,19 @@ a {
         top: -1.7px;
     }
 
-    .arrow-icon {
+    .section5 .arrow-icon {
       margin-left: 0.5rem;
       width: 16px;
       height: 16px;
       position: relative;
       top: 4px;
+    }
+
+    .arrow-icon {
+      margin-left: 0.5rem;
+      width: 16px;
+      height: 16px;
+      position: relative;
     }
 
     @media (min-width: 1024px) {
@@ -2422,12 +2430,19 @@ a {
       transform: scale(0.97);
     }
 
-    .arrow-icon {
+    .section5 .arrow-icon {
       margin-left: 0.5rem;
       width: 16px;
       height: 16px;
       position: relative;
       top: 4px;
+    }
+
+    .arrow-icon {
+      margin-left: 0.5rem;
+      width: 16px;
+      height: 16px;
+      position: relative;
     }
 
     /* Gallery Popup */
@@ -5428,5 +5443,13 @@ footer a:hover {
         background: #333;
         border-radius: 3px;
         transition: width 0.1s linear;
+    }
+
+    .section5 .arrow-icon {
+      margin-left: 0.5rem;
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: 0px;
     }
 }
