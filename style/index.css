@@ -3827,7 +3827,7 @@ a {
 
   .content-wrapper-14 p {
       user-select: none;
-      display: none;
+      /* display: none; */
       font-size: 14px;
       margin-top: 12px;
       margin-bottom: 20px;
@@ -5219,6 +5219,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 650px) {
+
+    .p2 {
+        display: none;
+    }
 
     .section9 {
         user-select: none;
