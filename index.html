@@ -1355,7 +1355,7 @@
 
             // Existing modal step navigation
             window.showStep = function(step) {
-                document.getElementById('step-0').style.display = step === 0 ? 'block' : 'none';
+                document.getElementById('step-0').style.display = step === 0 ? 'flex' : 'none';
                 document.getElementById('step-1').style.display = step === 1 ? 'block' : 'none';
                 const dots = document.querySelectorAll('.nav-dots .dot');
                 dots.forEach((dot, i) => dot.classList.toggle('active', i === step));

@@ -4331,6 +4331,7 @@ a {
 
 .nav-dots {
     display: flex;
+    opacity: 0;
     margin-bottom: 0.75rem;
 }
 
@@ -5576,5 +5577,21 @@ footer a:hover {
         width: 100vw;
         overflow: hidden;
         min-height: 40vh;
+    }
+
+    .modal-content {
+        height: 60vh;
+    }
+
+    .modal-image {
+        height: 70%;
+    }
+
+    .modal-image img {
+        height: 100%;
+    }
+
+    .modal-text {
+        height: 80%;
     }
 }
