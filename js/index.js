@@ -111,15 +111,9 @@ document.addEventListener("DOMContentLoaded", function () {
         modalBuild.style.display = "none";
     };
 
-    // Scroll to top
     window.scrollToTop = function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
-
-    // Cleanup (optional, commented out to persist localStorage)
-    // window.addEventListener("unload", () => {
-    //     localStorage.removeItem("play");
-    // });
 
     setTimeout(() => {
         if (localStorage.getItem("play") !== "true") {
@@ -129,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
 });
 
-// Prevent context menu on image
 document.querySelector('.handphone-img').addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
