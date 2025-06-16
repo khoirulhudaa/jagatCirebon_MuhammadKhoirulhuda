@@ -884,7 +884,7 @@ small {
       z-index: 999;
     }
 
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 1000px) {
           nav {
             width: 100%;
             position: fixed;
@@ -2211,7 +2211,7 @@ a {
       height: 365px;
     }
 
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 1000px) {
         .user-images {
             margin-left: auto;
             align-items: start;
@@ -2251,7 +2251,7 @@ a {
       align-items: center;
     }
 
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 1000px) {
         .user-images {
             position: absolute;
             margin-left: 0rem;
@@ -2588,7 +2588,7 @@ a {
         border-right: 1px solid black;
     }
 
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 1000px) {
         .item:nth-child(3) {
             border-left: 0 solid black;
             border-right: 0 solid black;
@@ -3278,7 +3278,7 @@ a {
         font-size: 14px;
     }
 
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 1000px) {
         .menu-container {
             padding: 24px 16px 8px;
         }
@@ -3665,7 +3665,7 @@ a {
       justify-content: space-between;
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1000px) {
       .main-text-header p:first-child {
         font-weight: 600;
         font-size: 24px;
@@ -3921,7 +3921,7 @@ a {
       align-items: center;
   }
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1000px) {
     .footer {
         flex-direction: column;
     }
@@ -4424,7 +4424,7 @@ cursor: pointer;
 }
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
     .button-container5 {
         display: flex;
         flex-direction: column;
@@ -5218,7 +5218,7 @@ footer a:hover {
     height: 100%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
 
     .p2 {
         display: none;
@@ -5456,4 +5456,8 @@ footer a:hover {
       position: relative;
       top: 0px;
     }
+}
+
+.hero-button .icon:hover {
+    cursor: pointer;
 }
