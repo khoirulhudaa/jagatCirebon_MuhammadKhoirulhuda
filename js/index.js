@@ -8,8 +8,15 @@ const menuItems = sidebar.querySelectorAll('ul li a');
 // Function to close sidebar
 function closeSidebarMenu() {
     sidebar.classList.remove('active');
-    sidebar.style.left = '-100%';
 }
+
+// Function to open sidebar
+function openSidebarMenu() {
+    sidebar.classList.add('active');
+}
+
+// Add click event to hamburger menu
+hamburger.addEventListener('click', openSidebarMenu);
 
 // Add click event to close button and menu items
 closeSidebar.addEventListener('click', closeSidebarMenu);
@@ -17,13 +24,9 @@ menuItems.forEach(item => {
     item.addEventListener('click', closeSidebarMenu);
 });
 
-hamburger.addEventListener('click', () => {
-    sidebar.style.left = '0';
-});
-
 function scrollToSection(id) {
     location.hash = '#' + id;
-    sidebar.style.left = '-100%';
+    sidebar.classList.remove('active');
 }
 
 // Initialize feather icons if available

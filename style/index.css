@@ -963,6 +963,43 @@ small {
       left: 0;
     }
 
+    .sidebar ul li {
+        opacity: 0; /* Start hidden */
+        transform: translateX(-20px); /* Start slightly off to the left */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Animation properties */
+    }
+
+    .sidebar.active ul li {
+        opacity: 1; /* Fully visible */
+        transform: translateX(0); /* Move to original position */
+    }
+
+    /* Staggered delay for each li */
+    .sidebar.active ul li:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+    .sidebar.active ul li:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+    .sidebar.active ul li:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+    .sidebar.active ul li:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+    .sidebar.active ul li:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+    .sidebar.active ul li:nth-child(6) {
+        transition-delay: 0.6s;
+    }
+    .sidebar.active ul li:nth-child(7) {
+        transition-delay: 0.7s;
+    }
+    .sidebar.active ul li:nth-child(8) {
+        transition-delay: 0.8s;
+    }
+
     .sidebar .close-btn {
       position: absolute;
       right: 20px;

@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Strait&display=swap" rel="stylesheet">
     <script src="./js/feather.js"></script>
-    <link rel="stylesheet" href="./style/index.css">>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <style>
         * {
             margin: 0;
@@ -33,7 +34,7 @@
             scroll-behavior: smooth;
         }
 
-       body {
+        body {
             font-family: Arial, sans-serif;
             overflow-x: hidden;
         }
@@ -334,14 +335,13 @@
             line-height: 1.5;
         }
 
-        
         #xpresensi-text {
             font-weight: bold;
             background: linear-gradient(
-            to right,
-            #00b837, /* Kuning cerah */
-            #0051e7, /* Pink cerah */
-            #0184a5  /* Hijau neon */
+                to right,
+                #00b837,
+                #0051e7,
+                #0184a5
             );
             background-size: 200% 100%;
             -webkit-background-clip: text;
@@ -352,27 +352,15 @@
         }
 
         @keyframes gradientShift {
-            0% {
-            background-position: 0% 50%;
-            }
-            50% {
-            background-position: 100% 50%;
-            }
-            100% {
-            background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         @keyframes shine {
-            0% {
-            filter: brightness(1);
-            }
-            50% {
-            filter: brightness(1.5);
-            }
-            100% {
-            filter: brightness(1);
-            }
+            0% { filter: brightness(1); }
+            50% { filter: brightness(1.5); }
+            100% { filter: brightness(1); }
         }
 
         @media screen and (max-width: 650px) {
@@ -423,7 +411,6 @@
     </style>
 </head>
 <body>
-
     <audio id="background-audio" src="./assets/audio/audio.mp3" autoplay loop></audio>
    
     <!-- Navbar -->
@@ -438,29 +425,27 @@
         </div>
     </nav>
 
-    <!-- Audio -->
-
     <!-- Gradient Images -->
     <img src="./assets/gr.svg" alt="gradient1" class="gr1" draggable="false" oncontextmenu="return false;">
     <img src="./assets/gr2.svg" alt="gradient" class="gr3" draggable="false" oncontextmenu="return false;">
     <img src="./assets/gr2.svg" alt="gradient2" class="gr2" draggable="false" oncontextmenu="return false;">
 
     <!-- Main Section -->
-    <section class="tokoh-section">
+    <section class="tokoh-section" data-aos="fade-up" data-aos-delay="100">
         <div class="tokoh-info">
-            <div class="breadcrumb">
+            <div class="breadcrumb" data-aos="fade-up" data-aos-delay="200">
                 <a href="index.html" class="breadcrumb-link">Laman utama</a>
                 <span class="breadcrumb-separator">/</span>
                 <span>Tokoh Sejarah Cirebon</span>
             </div>
-            <h2>Ngenal Tokoh Bersejarah Cirebon</h2>
-            <p>
+            <h2 data-aos="fade-up" data-aos-delay="300">Ngenal Tokoh Bersejarah Cirebon</h2>
+            <p data-aos="fade-up" data-aos-delay="400">
                 Cari tahu cerita inspiratif para tokoh sing mbangun sejarah lan budaya Cirebon, 
                 saka pendiri kesultanan nganti penyebar agama Islam.
             </p>
         </div>
-        <div class="tokoh-gallery">
-            <div class="tokoh-card">
+        <div class="tokoh-gallery" data-aos="fade-up" data-aos-delay="500">
+            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="600">
                 <img src="./assets/cakrabuana.jpg" alt="Pangeran Walangsungsang" class="tokoh-image">
                 <button class="booking-button" onclick="openModal('walangsungsang')">
                     <span>Rinciyan</span>
@@ -469,7 +454,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card">
+            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="700">
                 <img src="./assets/sunanGunungJati.jpg" alt="Sunan Gunung Jati" class="tokoh-image">
                 <button class="booking-button" onclick="openModal('sunanGunungJati')">
                     <span>Rinciyan</span>
@@ -478,7 +463,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card">
+            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="800">
                 <img src="./assets/kiGedeTapa.jpg" alt="Ki Gedeng Tapa" class="tokoh-image">
                 <button class="booking-button" onclick="openModal('kiGedengTapa')">
                     <span>Rinciyan</span>
@@ -487,7 +472,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card">
+            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="900">
                 <img src="./assets/kiDanusela.jpeg" alt="Ki Danusela" class="tokoh-image">
                 <button class="booking-button" onclick="openModal('kiDanusela')">
                     <span>Rinciyan</span>
@@ -496,7 +481,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card">
+            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="1000">
                 <img src="./assets/default.jpg" alt="Nyai Rara Santang" class="tokoh-image">
                 <button class="booking-button" onclick="openModal('nyaiRaraSantang')">
                     <span>Rinciyan</span>
@@ -505,7 +490,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card">
+            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="1100">
                 <img src="./assets/default.jpg" alt="Nyai Subang Larang" class="tokoh-image">
                 <button class="booking-button" onclick="openModal('nyaiSubangLarang')">
                     <span>Rinciyan</span>
@@ -527,7 +512,7 @@
     </div>
 
     <!-- Footer -->
-   <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-delay="1200">
         <div class="content-wrapper-footer">
             <div class="footer-logo">
                 <h2 id="xpresensi-text">JagatCirebon</h2>
@@ -536,31 +521,31 @@
                 <div class="footer-column">
                     <p>Seni & Adat</p>
                     <ul>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Tari+Topeng+Cirebon">Tari Topeng Cirebon</a></li>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Wayang+Golek+Cepak">Wayang Golek Cepak</a></li>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Upacara+Panjang+Jimat">Upacara Panjang Jimat</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Tari+Topeng+Cirebon">Tari Topeng Cirebon</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Wayang+Golek+Cepak">Wayang Golek Cepak</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Upacara+Panjang+Jimat">Upacara Panjang Jimat</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <p>Panganan Khas</p>
                     <ul>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Nasi+Jamblang">Nasi Jamblang</a></li>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Empal+Gentong">Empal Gentong</a></li>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Tahu+Gejrot+Docang">Tahu Gejrot & Docang</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Nasi+Jamblang">Nasi Jamblang</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Empal+Gentong">Empal Gentong</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Tahu+Gejrot+Docang">Tahu Gejrot & Docang</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <p>Warisan & Kriya</p>
                     <ul>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Batik+Trusmi">Batik Trusmi</a></li>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Kriya+Kerang">Kriya Kerang</a></li>
-                        <li><a target="__blacnk" href="https://www.google.com/search?q=Senjata+Kujang+Cirebon">Senjata Kujang Cirebon</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Batik+Trusmi">Batik Trusmi</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Kriya+Kerang">Kriya Kerang</a></li>
+                        <li><a target="_blank" href="https://www.google.com/search?q=Senjata+Kujang+Cirebon">Senjata Kujang Cirebon</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <div class="footer-bottom">
+    <div class="footer-bottom" data-aos="fade-up" data-aos-delay="1300">
         <small>#JagatCirebonan — Eksplorasi Digital Budaya Nusantara</small>
         <div class="back-to-top" onclick="scrollToTop()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -570,7 +555,13 @@
     </div>
 
     <script>
-       document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
             const audio = document.getElementById('background-audio');
             if (audio) {
                 audio.volume = 0.75;
@@ -581,6 +572,9 @@
             }
 
             window.scrollTo(0, 0);
+
+            // Initialize Feather Icons
+            feather.replace();
         });
 
         const figureDetails = {
@@ -629,6 +623,14 @@
                 document.body.classList.remove('modal-open');
             }
         }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </body>
 </html>

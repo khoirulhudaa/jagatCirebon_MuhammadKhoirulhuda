@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <style>
         * {
             margin: 0;
@@ -289,7 +290,7 @@
             100% { filter: brightness(1); }
         }
 
-          @media screen and (max-width: 650px) {
+        @media screen and (max-width: 650px) {
             .tokoh-section {
                 padding: 5rem 20px 2rem 20px;
                 width: 100%;
@@ -357,22 +358,22 @@
     <img src="./assets/gr2.svg" alt="gradient2" class="gr2" draggable="false" oncontextmenu="return false;">
 
     <!-- Main Section -->
-    <section class="tokoh-section">
+    <section class="tokoh-section" data-aos="fade-up" data-aos-delay="100">
         <div class="tokoh-info">
-            <div class="breadcrumb">
+            <div class="breadcrumb" data-aos="fade-up" data-aos-delay="200">
                 <a href="index.html" class="breadcrumb-link">Laman utama</a>
                 <span class="breadcrumb-separator">/</span>
                 <span>Kontak</span>
             </div>
-            <h2>Kontak pengembang web</h2>
-            <p>Whatsapp: +6289513093406</p>
-            <p>Email: muhammadkhoirulhuda111@gmail.com</p>
-            <div id="map" class="map-container"></div>
+            <h2 data-aos="fade-up" data-aos-delay="300">Kontak pengembang web</h2>
+            <p data-aos="fade-up" data-aos-delay="400">Whatsapp: +6289513093406</p>
+            <p data-aos="fade-up" data-aos-delay="500">Email: muhammadkhoirulhuda111@gmail.com</p>
+            <div id="map" class="map-container" data-aos="fade-up" data-aos-delay="600"></div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-delay="700">
         <div class="footer-container">
             <p>© 2025 JagaCirebon. Hak cipta dilindungi.</p>
             <ul class="footer-links">
@@ -385,8 +386,15 @@
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
             // Initialize Leaflet map
             const map = L.map('map').setView([-6.7071, 108.5557], 13); // Centered on Cirebon
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
