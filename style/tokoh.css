@@ -349,15 +349,19 @@ body.modal-open {
     100% { filter: brightness(1); }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1000px) {
     .tokoh-section {
         padding: 5rem 20px 0.6rem 20px;
+    }
+
+    .breadcrumb {
+        margin-bottom: 6px;
     }
 
     .footer {
         background: #fff;
         border-top: 1px solid #000;
-        padding: 1rem 1rem;
+        padding: 1rem 3.6px;
         font-size: 16px;
         flex-direction: column;
     }
