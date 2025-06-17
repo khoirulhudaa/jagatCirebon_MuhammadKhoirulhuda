@@ -12,9 +12,6 @@
     <script src="./js/feather.js"></script>
 </head>
 <body>
-     <!-- Audio -->
-    <audio id="background-audio" src="./assets/audio/audio.mp3" autoplay loop></audio>
-     
     <div class="container-load">
         <img
             loading="lazy"
@@ -189,8 +186,8 @@
             <div class="sponsor-container">
                 <div class="sponsor-items">
                     <div class="sponsor-item">Pengetahuan</div>
-                    <div class="sponsor-item">Warisan</div>
-                    <div class="sponsor-item">Sejarah</div>
+                    <div class="sponsor-item">Kulineran</div>
+                    <div class="sponsor-item">Cirebon</div>
                 </div>
             </div>
         </section>
@@ -926,11 +923,8 @@
     const playPauseBtn = document.getElementById('playPause');
     const playPauseBtn2 = document.getElementById('playPause2');
     const progressBar = document.querySelector('.progress');
-    const volumeBar = document.querySelector('.volume');
     const currentTimeEl = document.querySelector('.current-time');
     const durationEl = document.querySelector('.duration');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
     let isPlaying = false;
 
     // Play/Pause functionality
@@ -977,23 +971,14 @@
     });
 
     // Volume control
-    document.querySelector('.volume-bar').addEventListener('click', (e) => {
+    document.querySelector('.volume-bar')?.addEventListener('click', (e) => {
         const width = e.target.clientWidth;
         const clickX = e.offsetX;
         const volume = clickX / width;
         audio.volume = volume;
-        volumeBar.style.width = `${volume * 100}%`;
     });
 
-    // Previous/Next track (placeholder functionality)
-    prevBtn.addEventListener('click', () => {
-        alert('Previous track functionality not implemented.');
-    });
-
-    nextBtn.addEventListener('click', () => {
-        alert('Next track functionality not implemented.');
-    });
-
+   
     // Format time in mm:ss
     function formatTime(seconds) {
         const minutes = Math.floor(seconds / 60);
@@ -1003,7 +988,6 @@
 
     // Set initial volume
     audio.volume = 1;
-    volumeBar.style.width = '100%';
 
     // Set duration when metadata is loaded
     audio.addEventListener('loadedmetadata', () => {
@@ -1527,22 +1511,6 @@
         function closeOpeningModal() {
             document.getElementById('opening-modal').style.display = 'none';
             localStorage.setItem('play', 'true');
-            playAudio();
-        }
-
-        function playAudio() {
-            const audio = document.getElementById('background-audio');
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.error('Audio playback failed:', error);
-                    // Fallback: Wait for user interaction to play audio
-                    document.addEventListener('click', function tryPlayAudio() {
-                        audio.play().catch(err => console.error('Retry audio playback failed:', err));
-                        document.removeEventListener('click', tryPlayAudio);
-                    }, { once: true });
-                });
-            }
         }
 
         // Check localStorage on page load
@@ -1550,7 +1518,6 @@
             const modal = document.getElementById('opening-modal');
             if (localStorage.getItem('play') === 'true') {
                 modal.style.display = 'none'; // Skip modal if play is true
-                playAudio(); // Attempt to play audio
             } else {
                 modal.style.display = 'block'; // Show modal on first visit
             }
@@ -1621,30 +1588,41 @@
             carouselImages.forEach((img, i) => {
                 img.classList.toggle('active', i === index);
             });
-            titleElement.textContent = images[index].title;
-            descElement.textContent = images[index].desc;
+            if (titleElement) titleElement.textContent = images[index].title;
+            if (descElement) descElement.textContent = images[index].desc;
         }
 
-        showImage(currentIndex);
-
-        const interval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
+        // Check for required elements
+        if (!prevButton || !nextButton || !titleElement || !descElement || !carouselImages.length) {
+            console.error('Carousel elements missing:', {
+                prevButton: !prevButton,
+                nextButton: !nextButton,
+                titleElement: !titleElement,
+                descElement: !descElement,
+                carouselImages: !carouselImages.length
+            });
+        } else {
             showImage(currentIndex);
-        }, 3000);
 
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-        });
+            const interval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }, 3000);
 
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-        });
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            });
 
-        window.addEventListener('unload', () => {
-            clearInterval(interval);
-        });
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            });
+
+            window.addEventListener('unload', () => {
+                clearInterval(interval);
+            });
+        }
     </script>
     <script>
         function toggleGallery() {

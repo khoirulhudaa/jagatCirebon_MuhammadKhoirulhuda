@@ -411,8 +411,6 @@
     </style>
 </head>
 <body>
-    <audio id="background-audio" src="./assets/audio/audio.mp3" autoplay loop></audio>
-   
     <!-- Navbar -->
     <nav>
         <a href="index.html" class="logo" id="xpresensi-text">JagatCirebon</a>
@@ -561,15 +559,6 @@
                 duration: 800,
                 once: true
             });
-
-            const audio = document.getElementById('background-audio');
-            if (audio) {
-                audio.volume = 0.75;
-                audio.muted = false;
-                audio.play().catch(error => {
-                    console.error('Audio playback failed:', error);
-                });
-            }
 
             window.scrollTo(0, 0);
 
