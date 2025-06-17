@@ -261,6 +261,7 @@ color: orange !important;
 @media screen and (max-width: 650px) {
 .tokoh-section {
     padding: 5rem 20px 2rem 20px;
+    width: 100%;
 }
 
 .tokoh-info h2 {
