@@ -3277,6 +3277,11 @@ a {
         padding: 8px 24px 40px;
         min-height: 70vh;
         overflow: hidden;
+        cursor: default;
+    }
+
+    .section11 .menu-list, .section11 .menu-item, .section11 .content-wrapper-11, .section11 .menu-container {
+        cursor: default;
     }
 
     .vertical-line-left {
@@ -3367,7 +3372,7 @@ a {
         display: flex;
         flex-direction: column;
         padding: 16px 12px;
-        border: 1px solid rgba(0, 0, 0, 0.5);
+        border: 1px solid black;
     }
 
     .menu-item span {
