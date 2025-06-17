@@ -1716,7 +1716,7 @@ a {
     background: white;
     padding: 20px;
     border: 1px solid #000;
-    text-align: center;
+    text-align: left;
 }
 
 .footer {
@@ -2877,7 +2877,21 @@ a {
       display: flex;
       align-items: center;
       margin-top: 30px;
+      cursor: pointer;
       gap: 12px;
+  }
+
+  .button-container9:hover {
+    color: rgb(49, 49, 49);
+  }
+
+  .button-container9:active {
+    transform: scale(0.98);
+  }
+
+
+  .button-container9 p {
+    cursor: pointer;
   }
 
   .card .button {
