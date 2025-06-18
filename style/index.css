@@ -5333,6 +5333,10 @@ footer a:hover {
         display: none;
     }
 
+    .heading6 {
+        margin-left: -1px;
+    }
+
     .content-right h2 {
         margin-top: 28px;
         margin-bottom: 18px;
