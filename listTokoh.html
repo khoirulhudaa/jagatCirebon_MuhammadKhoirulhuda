@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Strait&display=swap" rel="stylesheet">
     <script src="./js/feather.js"></script>
     <link rel="stylesheet" href="./style/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="./style/tokoh.css">
+    <link rel="stylesheet" href="./style/scrollAnimation.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -32,21 +32,21 @@
     <img src="./assets/gr2.svg" alt="gradient2" class="gr2" draggable="false" oncontextmenu="return false;">
 
     <!-- Main Section -->
-    <section class="tokoh-section" data-aos="fade-up" data-aos-delay="100">
+    <section class="tokoh-section">
         <div class="tokoh-info">
-            <div class="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+            <div class="breadcrumb animate-on-scroll">
                 <a href="index.html" class="breadcrumb-link">Laman utama</a>
                 <span class="breadcrumb-separator">/</span>
                 <span>Tokoh Sejarah Cirebon</span>
             </div>
-            <h2 data-aos="fade-up" data-aos-delay="300">Ngenal Tokoh Bersejarah Cirebon</h2>
-            <p data-aos="fade-up" data-aos-delay="400">
+            <h2 class="animate-on-scroll">Ngenal Tokoh Bersejarah Cirebon</h2>
+            <p class="animate-on-scroll">
                 Cari tahu cerita inspiratif para tokoh sing mbangun sejarah lan budaya Cirebon, 
                 saka pendiri kesultanan nganti penyebar agama Islam.
             </p>
         </div>
-        <div class="tokoh-gallery" data-aos="fade-up" data-aos-delay="500">
-            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="tokoh-gallery animate-on-scroll">
+            <div class="tokoh-card">
                 <img src="./assets/cakrabuana.jpg" alt="Pangeran Walangsungsang" class="tokoh-image">
                 <div class="nama-tokoh">
                 </div>
@@ -57,7 +57,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="tokoh-card">
                 <img src="./assets/sunanGunungJati.jpg" alt="Sunan Gunung Jati" class="tokoh-image">
                 <div class="nama-tokoh">
                 </div>
@@ -68,7 +68,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="800">
+            <div class="tokoh-card">
                 <img src="./assets/kiGedeTapa.jpg" alt="Ki Gedeng Tapa" class="tokoh-image">
                 <div class="nama-tokoh">
                 </div>
@@ -79,7 +79,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="900">
+            <div class="tokoh-card">
                 <img src="./assets/kiDanusela.jpeg" alt="Ki Danusela" class="tokoh-image">
                 <div class="nama-tokoh">
                 </div>
@@ -90,7 +90,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="1000">
+            <div class="tokoh-card">
                 <img src="./assets/default.jpg" alt="Nyai Rara Santang" class="tokoh-image">
                 <div class="nama-tokoh">
                 </div>
@@ -101,7 +101,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="tokoh-card" data-aos="fade-up" data-aos-delay="1100">
+            <div class="tokoh-card">
                 <img src="./assets/default.jpg" alt="Nyai Subang Larang" class="tokoh-image">
                 <div class="nama-tokoh">
                 </div>
@@ -167,7 +167,24 @@
         </div>
     </div>
 
-    <script src="./js/tokoh.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./js/tokoh.js" defer></script>
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>

@@ -221,6 +221,11 @@ cursor: pointer;
 color: #3b82f6;
 }
 
+.map-containe {
+    height: 400px;
+    overflow: hidden;
+}
+
 #modal-title {
 font-size: 1.5rem;
 margin-bottom: 1rem;

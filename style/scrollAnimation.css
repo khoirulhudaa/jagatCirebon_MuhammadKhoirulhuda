@@ -1,0 +1,86 @@
+/* Animation keyframes */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation class */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+
+/* Add specific delays for each section */
+.hero-section.animate-on-scroll {
+    transition-delay: 100ms;
+}
+
+.sponsor-section.animate-on-scroll {
+    transition-delay: 200ms;
+}
+
+.culture-section.animate-on-scroll {
+    transition-delay: 300ms;
+}
+
+.arts-section.animate-on-scroll {
+    transition-delay: 400ms;
+}
+
+.section5.animate-on-scroll {
+    transition-delay: 500ms;
+}
+
+.section6.animate-on-scroll {
+    transition-delay: 600ms;
+}
+
+.section7.animate-on-scroll {
+    transition-delay: 700ms;
+}
+
+.section8.animate-on-scroll {
+    transition-delay: 800ms;
+}
+
+.section9.animate-on-scroll {
+    transition-delay: 900ms;
+}
+
+.new-section.animate-on-scroll {
+    transition-delay: 1000ms;
+}
+
+.section10.animate-on-scroll {
+    transition-delay: 1100ms;
+}
+
+.section11.animate-on-scroll {
+    transition-delay: 1200ms;
+}
+
+.section12.animate-on-scroll {
+    transition-delay: 1300ms;
+}
+
+.section13.animate-on-scroll {
+    transition-delay: 1400ms;
+}
+
+.section14.animate-on-scroll {
+    transition-delay: 1500ms;
+}

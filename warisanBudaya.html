@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/index.css">
     <script src="./js/feather.js"></script>
+    <link rel="stylesheet" href="./style/scrollAnimation.css">
     <link rel="stylesheet" href="./style/budaya.css">
 </head>
 <body>
@@ -31,16 +32,16 @@
     </nav>
 
     <!-- Packet Section -->
-    <section class="packet-section" data-aos="fade-up" data-aos-delay="100">
-        <div class="breadcrumb2" data-aos="fade-up" data-aos-delay="200">
+    <section class="packet-section">
+        <div class="breadcrumb2 animate-on-scroll">
             <a href="index.html" class="breadcrumb-link2">Laman Utama</a>
             <span class="breadcrumb-separator2">/</span>
             <span>Tokoh Sajarah Cirebon</span>
         </div>
-        <h2 data-aos="fade-up" data-aos-delay="300">Warisan Sajarah Cirebon</h2>
-        <p data-aos="fade-up" data-aos-delay="400">Sawareh warisan sajarah ingkang isih jejeg lan nduwèni carita menarik ing tlatah Cirebon.</p>
+        <h2 class="animate-on-scroll">Warisan Sajarah Cirebon</h2>
+        <p class="animate-on-scroll">Sawareh warisan sajarah ingkang isih jejeg lan nduwèni carita menarik ing tlatah Cirebon.</p>
 
-        <div class="breadcrumb-and-buttons" data-aos="fade-up" data-aos-delay="500">
+        <div class="breadcrumb-and-buttons animate-on-scroll">
             <div class="breadcrumb">
                 <a href="index.html">Laman Utama</a>
                 <span>/</span>
@@ -56,7 +57,7 @@
             </div>
         </div>
 
-        <div class="services-container" data-aos="fade-up" data-aos-delay="600">
+        <div class="services-container animate-on-scroll">
             <div class="service-column">
                 <h3>Makam Sunan Gunung Jati</h3>
                 <img src="./assets/budaya1.jpg" alt="Makam Sunan Gunung Jati">
@@ -133,7 +134,24 @@
     </div>
 
     <!-- Scripts -->
-    <script src="./js/budaya.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./js/budaya.js" defer></script>
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>

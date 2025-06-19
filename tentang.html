@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="./style/tentang.css">
+    <link rel="stylesheet" href="./style/scrollAnimation.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -32,28 +32,28 @@
     <!-- Main Section -->
     <section class="tokoh-section">
         <div class="tokoh-info">
-            <div class="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+            <div class="breadcrumb animate-on-scroll">
                 <a href="index.html" class="breadcrumb-link">Laman Utama</a>
                 <span class="breadcrumb-separator">/</span>
                 <span>Tokoh Sajarah Cirebon</span>
             </div>
-            <h2 data-aos="fade-up" data-aos-delay="300">Ngenani JagatCirebon</h2>
-            <p data-aos="fade-up" data-aos-delay="400">
+            <h2 class="animate-on-scroll">Ngenani JagatCirebon</h2>
+            <p class="animate-on-scroll">
                 JagatCirebon kuwi sawijining platform digital sing kagawé kanggo ngenalna lan njaga kabudayan, sajarah, kasenian, wisata, carita rakyat, lan panganan khas Cirebon. Kita dadi jembatan kang nyambungké generasi saiki karo warisan para leluhur, ngajak panjenengan nyelami pesonané Cirebon liwat carita-carita inspiratif saka tokoh sajarah. Saka para pendiri Kesultanan Cirebon nganti para ulama panyebar Islam, kaya Sunan Gunung Jati, tokoh-tokoh iki wis mbentuk jati diri kutha sing kebak nilai kabudayan lan spiritualitas.
             </p>
-            <p data-aos="fade-up" data-aos-delay="500">
+            <p class="animate-on-scroll">
                 Liwat JagatCirebon, kita nyedhiyakake informasi kang jero ngenani rupa-rupa sisi budaya Cirebon. Panjenengan isa maca carita ngenani tradisi seni, kaya tari topeng lan sintren, sing nuduhké rasa seni masyarakat Cirebon. Kita uga ngulas babagan kasajerahan Kesultanan Cirebon, sing dikenal dadi pusat panyebaran Islam ing Tatar Jawa Kulon, lan pengaruhé marang sosial-politik jaman kepungkur.
             </p>
-            <p data-aos="fade-up" data-aos-delay="600">
+            <p class="animate-on-scroll">
                 Saliyane sajarah lan kasenian, JagatCirebon ngajak panjenengan nyekseni papan-papan wisata sing endah ing Cirebon. Saka Keraton Kasepuhan kang megah nganti situs ziarah Sunan Gunung Jati, saben panggonan nduwèni crita unik sing bisa nambah pengalaman panjenengan. Kita nyedhiyakke pandhuan wisata praktis, karo tips kanggo nikmati alamé kaya ing Pantai Kejawanan, uga jelajah désa-désa tradhisional sing isih ngetokké kabudayan leluhur.
             </p>
-            <p data-aos="fade-up" data-aos-delay="700">
+            <p class="animate-on-scroll">
                 Panganan khas Cirebon uga dadi sorotan utama JagatCirebon. Kita ngajak panjenengan ngenal rasa asli khas kéné, kaya empal gentong, sega jamblang, lan tahu gejrot — panganan sing ora mung enak, nanging ngandhut keragaman budaya kutha iki. Liwat resep, ulasan warung legendaris, lan carita ing baliké saben masakan, kita bareng nuduhké pengalaman kuliner sing otentik lan menggoda selera.
             </p>
-            <p data-aos="fade-up" data-aos-delay="800">
+            <p class="animate-on-scroll">
                 JagatCirebon uga nguripké manèh carita rakyat lan legenda sing diwarisna turun-temurun. Crita kaya legenda Nyi Mas Gandasari utawa geguritan bab kawiryané para wali nyedhiyaké pangerten ngenani nilai moral lan kawicaksanan lokal. Kanthi narasi sing menarik, muga-muga iso ngajari generasi enom supaya luwih ngurmati akar budayané dhéwé.
             </p>
-            <p data-aos="fade-up" data-aos-delay="900">
+            <p class="animate-on-scroll">
                 Minangka platform sing kabuka kanggo sapa wae, JagatCirebon cumepak dadi sumber informasi sing bisa dipercaya kanggo warga lokal, pelancong, lan para pencinta budaya saka sak donya. Kita ngajak panjenengan mèlu perjalanan iki, ngudhari ayuné Cirebon, lan bareng-bareng njaga warisané. Bareng JagatCirebon, ayo padha ngrayakaké kabudayan, sajarah, lan carita Cirebon sing ora bakal ilang, kanggo dina iki lan sing bakal teka.
             </p>
         </div>
@@ -71,7 +71,24 @@
         </div>
     </footer>
 
-    <script src="./js/tentang.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./js/tentang.js" defer></script>
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>

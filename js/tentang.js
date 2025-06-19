@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize AOS
-    AOS.init({
-        duration: 800,
-        once: true
-    });
-
     const navLinks = document.querySelectorAll('.navbar-menu a');
 
     // Set current navigation link

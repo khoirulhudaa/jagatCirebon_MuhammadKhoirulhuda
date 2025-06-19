@@ -167,8 +167,9 @@ body.modal-open {
 }
 
 .map-container {
-    height: 400px;
+    height: 440px;
     width: 100%;
+    overflow: hidden;
     margin: 0 auto 0px;
     border: 1px solid #000;
     border-radius: 5px;

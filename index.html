@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&family=Strait&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/index.css">
-    <script src="./js/feather.js"></script>
+    <link rel="stylesheet" href="./style/scrollAnimation.css">
+    <script src="./js/feather.js" defer></script>
 </head>
 <body>
     <div class="container-load">
@@ -71,7 +72,7 @@
     <main id="main-content" class="main-content" style="display: none;">
        <!-- Navbar -->
         <nav>
-            <a href="index.html" class="logo" id="xpresensi-text">JagatCirebon</a>
+            <a href="./index.html" class="logo" id="xpresensi-text">JagatCirebon</a>
             <div class="menu">
                 <ul>
                     <li><a href="#warisan">Budaya</a></li>
@@ -80,8 +81,8 @@
                     <li><a href="#tokoh">Tokoh</a></li>
                     <li><a href="#kuliner">Kuliner</a></li>
                     <div>|</div>
-                    <li><a href="tentang.html">Tentang</a></li>
-                    <li><a href="kontak.html">Kontak</a></li>
+                    <li><a href="./tentang.html">Tentang</a></li>
+                    <li><a href="./kontak.html">Kontak</a></li>
                 </ul>
             </div>
             <div class="hamburger" id="hamburger">
@@ -107,7 +108,7 @@
         </div>
 
         <!-- Hero Section -->
-        <section class="hero-section" data-aos-delay="100">
+        <section class="hero-section">
             <div class="hero-grid">
                 <div class="grid-line horizontal top-8"></div>
                 <div class="grid-line horizontal top-20"></div>
@@ -133,7 +134,7 @@
             <img src="./assets/gr.svg" alt="gradient" class="gradient gr3">
             <img src="./assets/gr4.svg" alt="gradient1" class="gradient gr1">
             <img src="./assets/gr2.svg" alt="gradient2" class="gradient gr2">
-            <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
+            <div class="hero-content animate-on-scroll">
                 <div class="hero-top-bar">
                     <span class="icon">✨</span>
                     Caruban Nagari, Kutha Wali (Cirebone kula)
@@ -171,7 +172,7 @@
         </section>
 
         <!-- Section 2 -->
-        <section class="sponsor-section" data-aos="fade-up" data-aos-delay="100" data-aos-delay="200">
+        <section class="sponsor-section animate-on-scroll">
             <div class="sponsor-container">
                 <div class="sponsor-items">
                     <div class="sponsor-item">Budaya</div>
@@ -192,7 +193,7 @@
         </section>
 
         <!-- Section 3 -->
-        <section id="warisan" class="culture-section" data-aos="fade-up" data-aos-delay="100" data-aos-delay="300">
+        <section id="warisan" class="culture-section animate-on-scroll">
             <div class="culture-image">
                 <img src="./assets/kasepuhan2.jpg" alt="kasepuhan cirebon" class="grayscale">
             </div>
@@ -208,7 +209,7 @@
                 <p class="culture-description desktop">
                     Temokno kaendahan budaya Cirebon, saka Keraton Kasepuhan nganti batik Mega Mendung, kanthi pengalaman digital sing nggawa harmoni tradisi lan modernitas kanggo nyusur warisan Kutha Wali.
                 </p>
-                <a href="warisanBudaya.html" class="culture-button">
+                <a href="./warisanBudaya.html" class="culture-button">
                     Sakteruse Nyusur
                     <span class="icon">➔</span>
                 </a>
@@ -216,7 +217,7 @@
         </section>
 
         <!-- Section 4 -->
-        <section class="arts-section" id="kesenian" data-aos="fade-up" data-aos-delay="100" data-aos-delay="400">
+        <section class="arts-section animate-on-scroll" id="kesenian">
             <div class="arts-content">
                 <h2 class="arts-title">Kesenian Tradisional Kutha Wali</h2>
                 <div class="arts-items">
@@ -271,7 +272,7 @@
             </div>
         </section>
 
-        <section class="section5" id="wisata" data-aos="fade-up" data-aos-delay="100" data-aos-delay="500">
+        <section class="section5 animate-on-scroll" id="wisata">
             <div class="container5">
                 <h2 class="heading">Wisata Sejarah & Budaya Sekitar Daerah Cirebon</h2>
                 <div class="list-container5">
@@ -331,7 +332,7 @@
                             </svg>
                         </p>
                     </a>
-                    <a href="listWisata.html" aria-label="Lihat wisata" class="button5 button-primary5b" id="google-maps-link">
+                    <a href="./listWisata.html" aria-label="Lihat wisata" class="button5 button-primary5b" id="google-maps-link">
                         Deleng sakabéhna
                         <p class="p5">
                             <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -349,7 +350,7 @@
             </div>
         </section>
 
-        <section id="photography" class="section6" data-aos="fade-up" data-aos-delay="100" data-aos-delay="600">
+        <section id="photography" class="section6 animate-on-scroll">
             <div class="container6">
             <!-- Carousel -->
             <div class="carousel">
@@ -374,7 +375,7 @@
                  Harmoni Budaya Cirebon dalam
                 <span class="highlight">Dunia Digital</span>
                 </h2>
-                <p data-aos="fade-up" data-aos-delay="100" data-aos-delay="100" class="description6">
+                <p class="description6 animate-on-scroll">
                     Abadèkna kaéndahan budaya Cirebon liwat fotografi lan videografi <br>
                     kanthi kualitas dhuwur, ngadhekaké galeri digital sing nyenengaké ati.
                 </p>
@@ -382,7 +383,7 @@
             </div>
         </section>
 
-        <section class="section7" id="tokoh" data-aos="fade-up" data-aos-delay="100" data-aos-delay="700">
+        <section class="section7 animate-on-scroll" id="tokoh">
             <div class="header-container">
             <h2 class="heading">
                 Jejak Tokoh & Nilai Kebudayaan <br class="hidden lg:inline"> Warisan Cirebon
@@ -435,7 +436,7 @@
                             Nyeruput crita para tokoh budaya Nusantara sing wis marisi ajaran luhur, seni, lan semangat kebangsaan. Saben tokoh iku cerminan saka jati diri lan kawicaksanan lokal.
                         </p>
                     </div>
-                    <a href="listTokoh.html">
+                    <a href="./listTokoh.html">
                         <div class="gallery-button">
                             Deleng sakabèhé
                             <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -480,7 +481,7 @@
             </div>
         </div>
 
-        <section class="section8" data-aos="fade-up" data-aos-delay="100" data-aos-delay="800">
+        <section class="section8 animate-on-scroll">
             <div class="content-wrapper">
                  <div class="item">
                     <h2>9</h2>
@@ -513,11 +514,11 @@
             </div>
         </div>
 
-        <section class="section9" id="cerita" data-aos="fade-up" data-aos-delay="100" data-aos-delay="900">
+        <section class="section9 animate-on-scroll" id="cerita">
         <div class="content-wrapper9">
             <h2>Cerita dan Legenda Rakyat Cirebon yang Memikat</h2>
             <div class="cards-container">
-                <div class="card" data-aos-delay="100" data-video="https://www.youtube.com/embed/MQLDhOYNeNE?si=sYN835ViO3WaMk9e">
+                <div class="card" data-video="https://www.youtube.com/embed/MQLDhOYNeNE?si=sYN835ViO3WaMk9e">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="3" width="18" height="18" rx="2"/>
                         <path d="M12 8v8"/>
@@ -531,7 +532,7 @@
                         <p>Putar video</p>
                     </div>
                 </div>
-                <div class="card" data-aos-delay="200" data-video="https://www.youtube.com/embed/F7Wa5XJ5GWk?si=vqDbYbFZpxr_sLuX">
+                <div class="card" data-video="https://www.youtube.com/embed/F7Wa5XJ5GWk?si=vqDbYbFZpxr_sLuX">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"/>
                         <path d="M12 16v-4"/>
@@ -545,7 +546,7 @@
                         <p>Putar video</p>
                     </div>
                 </div>
-                <div class="card" data-aos-delay="300" data-video="https://www.youtube.com/embed/C-kcD6hbAuY?si=4Gf4cfQfVpk8AbfZ">
+                <div class="card" data-video="https://www.youtube.com/embed/C-kcD6hbAuY?si=4Gf4cfQfVpk8AbfZ">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect x="3" y="3" width="18" height="18" rx="2"/>
                         <path d="m9 12 2 2 4-4"/>
@@ -567,7 +568,7 @@
         </div>
         </section>
 
-        <section class="new-section" data-aos="fade-up" data-aos-delay="100" data-aos-delay="1000">
+        <section class="new-section animate-on-scroll">
             <div class="new-left">
                 <div class="h2-left">
                     <h4>Rungokna cara ngomong wong Cirebon</h4>
@@ -605,7 +606,7 @@
             </div>
         </div>
 
-        <section id="building" class="section10" data-aos="fade-up" data-aos-delay="100" data-aos-delay="1100">
+        <section id="building" class="section10 animate-on-scroll">
             <div class="content-wrapper-10">
                 <h2>
                     Macem-macem Acara Taunan lan Bulanan <br class="br" />
@@ -641,7 +642,7 @@
             </div> -->
         </section>
         
-        <section id="kuliner" class="section11" data-aos="fade-up" data-aos-delay="100" data-aos-delay="1200">
+        <section id="kuliner" class="section11 animate-on-scroll">
             <div class="vertical-line-left"></div>
             <div class="vertical-line-right"></div>
             <div class="content-wrapper-11">
@@ -653,43 +654,63 @@
                     <ul class="menu-list">
                         <li class="menu-item">
                             <span>Empal Gentong</span>
-                            Sup daging sapi nganggo kuah santan lan rempah khas.
+                            <small class="p-item">
+                                Sup daging sapi nganggo kuah santan lan rempah khas.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Nasi Jamblang</span>
-                            Sega dibungkus godhong jati karo lauk tradhisional.
+                            <small class="p-item">
+                                Sega dibungkus godhong jati karo lauk tradhisional.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Tahu Gejrot</span>
-                            Tahu digoreng nganggo kuah pedes lan legi sing seger.
+                            <small class="p-item">
+                                Tahu digoreng nganggo kuah pedes lan legi sing seger.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Docang</span>
-                            Sayur khas nganggo bumbu kacang lan klapa parut.
+                            <small class="p-item">
+                                Sayur khas nganggo bumbu kacang lan klapa parut.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Mi Koclok</span>
-                            Mie nganggo kuah kaldu pitik kentel karo suwiran daging pitik.
+                            <small class="p-item">
+                                Mie nganggo kuah kaldu pitik kentel karo suwiran daging pitik.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Sate Kalong</span>
-                            Sate wedhus nganggo bumbu kecap legi pedes.
+                            <small class="p-item">
+                                Sate wedhus nganggo bumbu kecap legi pedes.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Nasi Lengko</span>
-                            Sega nganggo sayuran seger lan sambel kacang khas Cirebon.
+                            <small class="p-item">
+                                Sega nganggo sayuran seger lan sambel kacang khas Cirebon.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Rabeg</span>
-                            Gulai wedhus khas Cirebon sing gurih lan kebak rempah.
+                            <small class="p-item">
+                                Gulai wedhus khas Cirebon sing gurih lan kebak rempah.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Gado-Gado Cirebon</span>
-                            Salad sayur nganggo bumbu kacang khas Cirebon.
+                            <small class="p-item">
+                                Salad sayur nganggo bumbu kacang khas Cirebon.
+                            </small>
                         </li>
                         <li class="menu-item">
                             <span>Lotek</span>
-                            Sayur mateng nganggo sambel kacang, meh padha karo gado-gado tapi khas Cirebon.
+                            <small class="p-item">
+                                Sayur mateng nganggo sambel kacang, meh padha karo gado-gado tapi khas Cirebon.
+                            </small>
                         </li>
                     </ul>
                 </div>
@@ -702,7 +723,7 @@
             </div> -->
         </section>
 
-        <section class="section12" id="alatMusik" data-aos="fade-up" data-aos-delay="100" data-aos-delay="1300">
+        <section class="section12 animate-on-scroll" id="alatMusik">
             <div class="content-wrapper-12">
                 <h1>Piranti Musik Khas Cirebon</h1>
                 <div class="decor-container">
@@ -734,7 +755,7 @@
             </div>
         </section>
 
-        <section class="section13" data-aos="fade-up" data-aos-delay="100" data-aos-delay="1400">
+        <section class="section13 animate-on-scroll">
             <div class="content-wrapper-13">
                 <h1>Walangsungsang, 1418 M</h1>
                 <div class="content-grid">
@@ -755,7 +776,7 @@
         </section>
 
         <div class="vertical-line"></div>
-        <section class="section14" data-aos="fade-up" data-aos-delay="100" data-aos-delay="1500">
+        <section class="section14 animate-on-scroll">
             <div class="content-wrapper-14">
                 <h3>Kacirebonan ing Donya Digital</h3>
                 <p class="p2">Golèk jawaban bab budaya, wisata, lan kabéh warisan khas Cirebon ing jaman saiki.</p>
@@ -920,8 +941,25 @@
     </div>
 
     <!-- Script javascript -->
-    <script src="./js/index.js"></script>
-    <script src="./js/homepage.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/homepage.js" defer></script>
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        // Observe all elements with animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>

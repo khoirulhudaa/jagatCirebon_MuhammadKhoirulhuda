@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="./style/wisata.css">
+    <link rel="stylesheet" href="./style/scrollAnimation.css">
 </head>
 <body>
     <!-- Gradient Images -->
@@ -31,15 +31,15 @@
     </nav>
 
     <!-- Packet Section -->
-    <section class="packet-section" data-aos="fade-up" data-aos-delay="100">
-        <div class="breadcrumb2" data-aos="fade-up" data-aos-delay="200">
+    <section class="packet-section">
+        <div class="breadcrumb2 animate-on-scroll">
             <a href="index.html" class="breadcrumb-link2">Laman utama</a>
             <span class="breadcrumb-separator2">/</span>
             <span>Tokoh Sejarah Cirebon</span>
         </div>
-        <h2 data-aos="fade-up" data-aos-delay="300">Wisata Populer neng Cirebon</h2>
-        <p data-aos="fade-up" data-aos-delay="400">Jelajahna kaendahan Cirebon kalawan wisata alam sing nggawe betah, warisan budaya sing ajeg, lan kuliner khas sing marai ngiler.</p>
-        <div class="breadcrumb-and-buttons" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="animate-on-scroll">Wisata Populer neng Cirebon</h2>
+        <p class="animate-on-scroll">Jelajahna kaendahan Cirebon kalawan wisata alam sing nggawe betah, warisan budaya sing ajeg, lan kuliner khas sing marai ngiler.</p>
+        <div class="breadcrumb-and-buttons animate-on-scroll">
             <div class="breadcrumb">
                 <a style="color: black; cursor: default;">Wisata populer</a>
                 <span>-</span>
@@ -54,7 +54,7 @@
                 </button>
             </div>
         </div>
-        <div class="services-container" data-aos="fade-up" data-aos-delay="600">
+        <div class="services-container animate-on-scroll">
             <div class="service-column">
                 <h3>Wisata Alam</h3>
                 <ul>
@@ -135,7 +135,24 @@
     </div>
 
     <!-- Scripts -->
-    <script src="./js/wisata.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./js/wisata.js" defer></script>
+    <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    // Observe all elements with animate-on-scroll class
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        observer.observe(element);
+    });
+</script>
 </body>
 </html>
