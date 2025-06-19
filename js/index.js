@@ -29,10 +29,10 @@ function scrollToSection(id) {
     closeSidebarMenu();
 }
 
-// Initialize feather icons if available
-if (typeof feather !== 'undefined') {
-    feather.replace();
-}
+// // Initialize feather icons if available
+// if (typeof feather !== 'undefined') {
+//     feather.replace();
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
     const mainContent = document.getElementById("main-content");

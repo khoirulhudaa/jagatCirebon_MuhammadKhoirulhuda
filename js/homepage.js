@@ -185,9 +185,6 @@ document.addEventListener('keydown', (event) => {
 });
 
 
-// Initialize Feather Icons
-feather.replace();
-
 document.addEventListener('DOMContentLoaded', function () {
     const videoButtons = document.querySelectorAll('.button-container9');
     const modal = document.getElementById('videoModal');

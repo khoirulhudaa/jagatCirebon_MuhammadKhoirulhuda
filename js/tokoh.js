@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
-
-    // Initialize Feather Icons
-    feather.replace();
 });
 
 const figureDetails = {

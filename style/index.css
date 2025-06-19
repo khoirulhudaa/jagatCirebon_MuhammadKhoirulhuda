@@ -2854,6 +2854,9 @@ a {
       align-items: center;
       margin-top: 30px;
       cursor: pointer;
+      width: max-content;
+      padding: 8px 8px;
+      border: 1px solid black;
       gap: 12px;
   }
 
