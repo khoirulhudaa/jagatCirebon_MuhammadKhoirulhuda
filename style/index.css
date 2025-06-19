@@ -2,6 +2,11 @@
     display: none;
 }
 
+@font-face {
+    font-family: 'Strait';
+    src: url('../fonts/Strait-Regular.ttf') format('truetype'); /* Sesuaikan format */
+}
+
 * {
     font-family: "Strait", serif;
 }
