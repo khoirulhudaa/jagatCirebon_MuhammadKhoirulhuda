@@ -87,10 +87,6 @@
     filter: brightness(0.75);
 }
 
-.breadcrumb span {
-    margin: 0 0.5rem;
-}
-
 .buttons {
     display: flex;
     margin-top: 1.5rem;
@@ -215,6 +211,10 @@
 }
 
 .breadcrumb-separator2 {
+    margin: 0 0.5rem;
+}
+
+.breadcrumb-separatorDown {
     margin: 0 0.5rem;
 }
 
