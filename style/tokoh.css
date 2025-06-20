@@ -361,7 +361,7 @@ body.modal-open {
     .footer {
         background: #fff;
         border-top: 1px solid #000;
-        padding: 1rem 3.6px;
+        padding: 1rem 0px;
         font-size: 16px;
         flex-direction: column;
     }
@@ -392,6 +392,10 @@ body.modal-open {
         border: 1px solid #000;
         max-width: 500px;
         width: 90%;
+    }
+
+    .tokoh-info {
+        margin-left: -2px;
     }
 
     .tokoh-info h2 {
