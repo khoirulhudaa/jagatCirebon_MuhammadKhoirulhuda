@@ -285,7 +285,7 @@ body.modal-open {
 
 @media screen and (max-width: 650px) {
     .kontak-section {
-        padding: 5rem 20px 2rem 20px;
+        padding: 5rem 20px 2rem 16px;
         width: 100%;
     }
 
@@ -308,7 +308,7 @@ body.modal-open {
     }
 
     .navbar {
-        padding: 1rem 19px;
+        padding: 1rem 16px;
     }
 
     .navbar ul {
