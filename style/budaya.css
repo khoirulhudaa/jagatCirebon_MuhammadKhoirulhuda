@@ -33,7 +33,7 @@
 @media (min-width: 1024px) {
     .packet-section h2 {
         width: 100%;
-        font-size: 3.375rem;
+        font-size: 3rem;
     }
 }
 
@@ -128,37 +128,37 @@
     margin-right: 0.75rem;
 }
 
-.services-container {
+.budayaa-container {
     width: 100%;
     border: 1px solid black;
     background-color: white;
 }
 
 @media (min-width: 1024px) {
-    .services-container {
+    .budayaa-container {
         display: flex;
     }
 }
 
-.service-column {
+.budaya-column {
     width: 100%;
     padding: 0.75rem 2rem;
     text-align: left;
 }
 
 @media (min-width: 1024px) {
-    .service-column {
+    .budaya-column {
         width: 33.333%;
         padding: 2rem;
     }
 
-    .service-column:nth-child(2) {
+    .budaya-column:nth-child(2) {
         border-left: 1px solid black;
         border-right: 1px solid black;
     }
 }
 
-.service-column h3 {
+.budaya-column h3 {
     font-size: 1.25rem;
     margin: 0.75rem 0 1rem 0;
     width: 100%;
@@ -168,7 +168,7 @@
     margin-right: auto;
 }
 
-.service-column img {
+.budaya-column img {
     width: 100%;
     height: auto;
     max-height: 200px;
@@ -176,14 +176,14 @@
     border-radius: 8px;
 }
 
-.service-column .description {
+.budaya-column .description {
     font-size: 0.875rem;
     line-height: 1.5;
     margin-top: 1rem;
     color: black;
 }
 
-.service-column .description p {
+.budaya-column .description p {
     line-height: 2em;
     width: 100%;
     font-size: 16px;
