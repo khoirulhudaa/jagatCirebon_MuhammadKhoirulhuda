@@ -3400,6 +3400,7 @@ a {
 
     .menu-item small {
         font-size: 15px;
+        line-height: 1.6rem;
     }
 
     .detail-button {
@@ -3936,6 +3937,10 @@ a {
       display: flex;
       justify-content: space-between;
       align-items: center;
+  }
+
+  .faq-question span {
+    line-height: 1.6em;
   }
 
   .faq-question:hover {
@@ -4847,8 +4852,7 @@ cursor: pointer;
     }
 
     .link-button { 
-        top: 8px;
-        right: 8px;
+        display: none;
     }
 
     .section7 .bottom-heading {
@@ -4903,6 +4907,7 @@ cursor: pointer;
 
     .content-right p {
         width: 100%;
+        margin-top: 26px;
     }
 
     .overlay-text {
@@ -5322,8 +5327,7 @@ footer a:hover {
     }
 
     .content-right h2 {
-        margin-top: 28px;
-        margin-bottom: 18px;
+        display: none;
     }
 
     .section9 {
